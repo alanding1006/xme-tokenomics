@@ -4,6 +4,8 @@ import EconomyLoop from "@/components/EconomyLoop";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Roadmap from "@/components/Roadmap";
+import StakingCalculator from "@/components/StakingCalculator";
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
         <Hero />
         <DualTokenSection />
         <EconomyLoop />
+        <Roadmap />
+        <StakingCalculator />
         <AllocationChart />
       </main>
       <Footer />

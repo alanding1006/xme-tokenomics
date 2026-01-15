@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "vision": "愿景",
+    "dualToken": "双代币模型",
+    "xme": "XME",
+    "xmex": "XMEX",
+    "allocation": "代币分配",
+    "roadmap": "路线图",
+    "calculator": "收益计算器",
+    "whitepaper": "白皮书",
+    "launchApp": "启动应用"
+  },
+  "hero": {
+    "tag": "代币经济模型 v2.0 上线",
+    "title": "Web3 社交的",
+    "titleHighlight": "经济引擎",
+    "description": "专为可持续增长、社区治理和真实价值捕获而设计的双代币模型。",
+    "explore": "探索 XME",
+    "readWhitepaper": "阅读白皮书"
+  },
+  "dualToken": {
+    "title": "双币驱动，单一生态",
+    "subtitle": "将治理与效用分离，确保长期稳定与可持续增长。",
+    "xme": {
+      "title": "XME",
+      "type": "治理代币",
+      "desc": "价值与治理的锚点。代表所有权、决策权和长期价值捕获。",
+      "features": [
+        "平台所有权与治理",
+        "收入分红与质押奖励",
+        "通缩回购与销毁",
+        "独家高级权益"
+      ]
+    },
+    "xmex": {
+      "title": "XMEX",
+      "type": "效用代币",
+      "desc": "增长的燃料。通过平衡的经济体系驱动日常活动、内容创作和用户参与。",
+      "features": [
+        "用户活动奖励",
+        "内容创作激励",
+        "平台服务支付",
+        "可转换为 XME (销毁机制)"
+      ]
+    }
+  },
+  "economy": {
+    "title": "经济飞轮",
+    "subtitle": "一个自我维持的循环，活动创造价值，价值回馈参与。",
+    "platform": "X.me 平台",
+    "aggregation": "价值聚合",
+    "activity": "用户活动",
+    "activityDesc": "内容创作、社交互动、参与度",
+    "rewards": "XMEX 奖励",
+    "rewardsDesc": "激励增长与参与",
+    "capture": "价值捕获",
+    "captureDesc": "费用、服务与销毁机制",
+    "governance": "XME 治理",
+    "governanceDesc": "质押、投票与长期持有"
+  },
+  "allocation": {
+    "title": "XME 代币分配",
+    "subtitle": "公平且可持续的分配模型，旨在协调所有利益相关者的激励。",
+    "totalSupply": "总供应量",
+    "items": {
+      "ecosystem": "生态系统与金库",
+      "team": "团队与顾问",
+      "private": "私募",
+      "airdrop": "空投",
+      "liquidity": "流动性",
+      "public": "公开发售"
+    }
+  },
+  "roadmap": {
+    "title": "路线图",
+    "subtitle": "我们通往去中心化和生态成熟的战略路径。",
+    "q1_2026": {
+      "title": "2026 Q1: 创世",
+      "desc": "TGE，双代币系统上线，基础质押功能"
+    },
+    "q2_2026": {
+      "title": "2026 Q2: 增长",
+      "desc": "内容挖矿上线，创作者工具，移动端 Beta"
+    },
+    "q3_2026": {
+      "title": "2026 Q3: 扩张",
+      "desc": "DAO 治理 v1，跨链桥，NFT 市场"
+    },
+    "q4_2026": {
+      "title": "2026 Q4: 成熟",
+      "desc": "完全去中心化，全球扩张，企业级 API"
+    }
+  },
+  "calculator": {
+    "title": "质押收益计算器",
+    "subtitle": "估算您质押 XMEX 的潜在收益。",
+    "amountLabel": "质押数量 (XMEX)",
+    "durationLabel": "锁仓时长",
+    "days": "天",
+    "apy": "年化收益率",
+    "estimatedReturns": "预估收益",
+    "totalValue": "总价值"
+  },
+  "footer": {
+    "desc": "通过可持续的代币经济学构建去中心化社交互动的未来。",
+    "resources": "资源",
+    "community": "社区",
+    "rights": "© 2026 X.me 基金会。保留所有权利。"
+  }
+}

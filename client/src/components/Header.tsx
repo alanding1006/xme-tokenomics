@@ -1,7 +1,11 @@
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 import { Link } from "wouter";
 
 export default function Header() {
+  const { t } = useTranslation();
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/80 backdrop-blur-md">
       <div className="container flex h-16 items-center justify-between">
@@ -12,20 +16,20 @@ export default function Header() {
           </a>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
-          <a href="#vision" className="hover:text-foreground transition-colors">Vision</a>
-          <a href="#dual-token" className="hover:text-foreground transition-colors">Dual Token</a>
-          <a href="#xme" className="hover:text-foreground transition-colors">XME</a>
-          <a href="#xmex" className="hover:text-foreground transition-colors">XMEX</a>
-          <a href="#allocation" className="hover:text-foreground transition-colors">Allocation</a>
+        <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-muted-foreground">
+          <a href="#dual-token" className="hover:text-foreground transition-colors">{t("nav.dualToken")}</a>
+          <a href="#roadmap" className="hover:text-foreground transition-colors">{t("nav.roadmap")}</a>
+          <a href="#calculator" className="hover:text-foreground transition-colors">{t("nav.calculator")}</a>
+          <a href="#allocation" className="hover:text-foreground transition-colors">{t("nav.allocation")}</a>
         </nav>
 
         <div className="flex items-center gap-4">
+          <LanguageSwitcher />
           <Button variant="outline" className="hidden sm:flex border-primary/50 hover:bg-primary/10 hover:text-primary-foreground">
-            Whitepaper
+            {t("nav.whitepaper")}
           </Button>
           <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
-            Launch App
+            {t("nav.launchApp")}
           </Button>
         </div>
       </div>

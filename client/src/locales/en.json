@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "vision": "Vision",
+    "dualToken": "Dual Token",
+    "xme": "XME",
+    "xmex": "XMEX",
+    "allocation": "Allocation",
+    "roadmap": "Roadmap",
+    "calculator": "Calculator",
+    "whitepaper": "Whitepaper",
+    "launchApp": "Launch App"
+  },
+  "hero": {
+    "tag": "Tokenomics v2.0 Live",
+    "title": "The Economic Engine of",
+    "titleHighlight": "Web3 Social",
+    "description": "A dual-token model designed for sustainable growth, community governance, and real value capture.",
+    "explore": "Explore XME",
+    "readWhitepaper": "Read Whitepaper"
+  },
+  "dualToken": {
+    "title": "Two Tokens, One Ecosystem",
+    "subtitle": "Separating governance from utility to ensure long-term stability and sustainable growth.",
+    "xme": {
+      "title": "XME",
+      "type": "GOVERNANCE TOKEN",
+      "desc": "The anchor of value and governance. Represents ownership, decision-making power, and long-term value capture.",
+      "features": [
+        "Platform Ownership & Governance",
+        "Revenue Sharing & Staking Rewards",
+        "Deflationary Buyback & Burn",
+        "Exclusive Premium Access"
+      ]
+    },
+    "xmex": {
+      "title": "XMEX",
+      "type": "UTILITY TOKEN",
+      "desc": "The fuel for growth. Drives daily activity, content creation, and user engagement through a balanced economy.",
+      "features": [
+        "User Activity Rewards",
+        "Content Creation Incentives",
+        "Platform Services Payment",
+        "Convertible to XME (Burn Mechanism)"
+      ]
+    }
+  },
+  "economy": {
+    "title": "The Economic Flywheel",
+    "subtitle": "A self-sustaining loop where activity generates value, and value rewards participation.",
+    "platform": "X.me Platform",
+    "aggregation": "Value Aggregation",
+    "activity": "User Activity",
+    "activityDesc": "Content creation, social interaction, engagement",
+    "rewards": "XMEX Rewards",
+    "rewardsDesc": "Incentivizing growth and participation",
+    "capture": "Value Capture",
+    "captureDesc": "Fees, services, and burn mechanisms",
+    "governance": "XME Governance",
+    "governanceDesc": "Staking, voting, and long-term holding"
+  },
+  "allocation": {
+    "title": "XME Token Allocation",
+    "subtitle": "A fair and sustainable distribution model designed to align incentives across all stakeholders.",
+    "totalSupply": "Total Supply",
+    "items": {
+      "ecosystem": "Ecosystem & Treasury",
+      "team": "Team & Advisors",
+      "private": "Private Sale",
+      "airdrop": "Airdrop",
+      "liquidity": "Liquidity",
+      "public": "Public Sale"
+    }
+  },
+  "roadmap": {
+    "title": "Roadmap",
+    "subtitle": "Our strategic path to decentralization and ecosystem maturity.",
+    "q1_2026": {
+      "title": "Q1 2026: Genesis",
+      "desc": "TGE, Dual-token system launch, Basic staking"
+    },
+    "q2_2026": {
+      "title": "Q2 2026: Growth",
+      "desc": "Content mining live, Creator tools, Mobile app beta"
+    },
+    "q3_2026": {
+      "title": "Q3 2026: Expansion",
+      "desc": "DAO governance v1, Cross-chain bridge, NFT marketplace"
+    },
+    "q4_2026": {
+      "title": "Q4 2026: Maturity",
+      "desc": "Full decentralization, Global expansion, Enterprise API"
+    }
+  },
+  "calculator": {
+    "title": "Staking Calculator",
+    "subtitle": "Estimate your potential returns by staking XMEX.",
+    "amountLabel": "Staking Amount (XMEX)",
+    "durationLabel": "Lock-up Duration",
+    "days": "Days",
+    "apy": "APY",
+    "estimatedReturns": "Estimated Returns",
+    "totalValue": "Total Value"
+  },
+  "footer": {
+    "desc": "Building the future of decentralized social interaction through sustainable tokenomics.",
+    "resources": "Resources",
+    "community": "Community",
+    "rights": "© 2026 X.me Foundation. All rights reserved."
+  }
+}

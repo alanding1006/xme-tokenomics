@@ -1,13 +1,16 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function EconomyLoop() {
+  const { t } = useTranslation();
+
   return (
     <section className="py-24 bg-white/5 relative overflow-hidden">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="font-display text-4xl font-bold">The Economic Flywheel</h2>
+          <h2 className="font-display text-4xl font-bold">{t("economy.title")}</h2>
           <p className="text-muted-foreground text-lg">
-            A self-sustaining loop where activity generates value, and value rewards participation.
+            {t("economy.subtitle")}
           </p>
         </div>
 
@@ -16,8 +19,8 @@ export default function EconomyLoop() {
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-secondary opacity-20 blur-3xl" />
             <div className="relative z-10 text-center">
-              <h3 className="font-display text-2xl font-bold">X.me Platform</h3>
-              <p className="text-sm text-muted-foreground">Value Aggregation</p>
+              <h3 className="font-display text-2xl font-bold">{t("economy.platform")}</h3>
+              <p className="text-sm text-muted-foreground">{t("economy.aggregation")}</p>
             </div>
           </div>
 
@@ -31,10 +34,10 @@ export default function EconomyLoop() {
               viewport={{ once: true }}
             >
               <div className="bg-secondary/20 text-secondary px-4 py-2 rounded-full text-sm font-bold mb-2">
-                User Activity
+                {t("economy.activity")}
               </div>
               <p className="text-xs text-muted-foreground w-48">
-                Content creation, social interaction, engagement
+                {t("economy.activityDesc")}
               </p>
             </motion.div>
 
@@ -46,10 +49,10 @@ export default function EconomyLoop() {
               viewport={{ once: true }}
             >
               <div className="bg-secondary/20 text-secondary px-4 py-2 rounded-full text-sm font-bold mb-2 inline-block">
-                XMEX Rewards
+                {t("economy.rewards")}
               </div>
               <p className="text-xs text-muted-foreground w-48 ml-auto">
-                Incentivizing growth and participation
+                {t("economy.rewardsDesc")}
               </p>
             </motion.div>
 
@@ -61,10 +64,10 @@ export default function EconomyLoop() {
               viewport={{ once: true }}
             >
               <div className="bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-bold mb-2">
-                Value Capture
+                {t("economy.capture")}
               </div>
               <p className="text-xs text-muted-foreground w-48">
-                Fees, services, and burn mechanisms
+                {t("economy.captureDesc")}
               </p>
             </motion.div>
 
@@ -76,10 +79,10 @@ export default function EconomyLoop() {
               viewport={{ once: true }}
             >
               <div className="bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-bold mb-2 inline-block">
-                XME Governance
+                {t("economy.governance")}
               </div>
               <p className="text-xs text-muted-foreground w-48">
-                Staking, voting, and long-term holding
+                {t("economy.governanceDesc")}
               </p>
             </motion.div>
           </div>

@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="py-12 border-t border-white/10 bg-black/20">
       <div className="container">
@@ -9,21 +13,21 @@ export default function Footer() {
               X.me
             </div>
             <p className="text-muted-foreground max-w-xs">
-              Building the future of decentralized social interaction through sustainable tokenomics.
+              {t("footer.desc")}
             </p>
           </div>
           
           <div>
-            <h4 className="font-bold mb-4">Resources</h4>
+            <h4 className="font-bold mb-4">{t("footer.resources")}</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-foreground">Whitepaper</a></li>
+              <li><a href="#" className="hover:text-foreground">{t("nav.whitepaper")}</a></li>
               <li><a href="#" className="hover:text-foreground">Documentation</a></li>
               <li><a href="#" className="hover:text-foreground">Brand Assets</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-bold mb-4">Community</h4>
+            <h4 className="font-bold mb-4">{t("footer.community")}</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="#" className="hover:text-foreground">Twitter</a></li>
               <li><a href="#" className="hover:text-foreground">Discord</a></li>
@@ -33,7 +37,7 @@ export default function Footer() {
         </div>
         
         <div className="pt-8 border-t border-white/5 text-center text-sm text-muted-foreground">
-          © 2026 X.me Foundation. All rights reserved.
+          {t("footer.rights")}
         </div>
       </div>
     </footer>

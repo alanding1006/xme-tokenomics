@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "vision": "Visi",
+    "dualToken": "Token Ganda",
+    "xme": "XME",
+    "xmex": "XMEX",
+    "allocation": "Alokasi",
+    "roadmap": "Peta Jalan",
+    "calculator": "Kalkulator",
+    "whitepaper": "Kertas Putih",
+    "launchApp": "Buka Aplikasi"
+  },
+  "hero": {
+    "tag": "Tokenomics v2.0 Aktif",
+    "title": "Mesin Ekonomi dari",
+    "titleHighlight": "Sosial Web3",
+    "description": "Model token ganda yang dirancang untuk pertumbuhan berkelanjutan, tata kelola komunitas, dan penangkapan nilai nyata.",
+    "explore": "Jelajahi XME",
+    "readWhitepaper": "Baca Kertas Putih"
+  },
+  "dualToken": {
+    "title": "Dua Token, Satu Ekosistem",
+    "subtitle": "Memisahkan tata kelola dari utilitas untuk memastikan stabilitas jangka panjang dan pertumbuhan berkelanjutan.",
+    "xme": {
+      "title": "XME",
+      "type": "TOKEN TATA KELOLA",
+      "desc": "Jangkar nilai dan tata kelola. Mewakili kepemilikan, kekuatan pengambilan keputusan, dan penangkapan nilai jangka panjang.",
+      "features": [
+        "Kepemilikan & Tata Kelola Platform",
+        "Bagi Hasil & Imbalan Staking",
+        "Pembelian Kembali & Pembakaran Deflasi",
+        "Akses Premium Eksklusif"
+      ]
+    },
+    "xmex": {
+      "title": "XMEX",
+      "type": "TOKEN UTILITAS",
+      "desc": "Bahan bakar untuk pertumbuhan. Mendorong aktivitas harian, pembuatan konten, dan keterlibatan pengguna melalui ekonomi yang seimbang.",
+      "features": [
+        "Imbalan Aktivitas Pengguna",
+        "Insentif Pembuatan Konten",
+        "Pembayaran Layanan Platform",
+        "Dapat Dikonversi ke XME (Mekanisme Pembakaran)"
+      ]
+    }
+  },
+  "economy": {
+    "title": "Roda Gila Ekonomi",
+    "subtitle": "Lingkaran mandiri di mana aktivitas menghasilkan nilai, dan nilai memberi penghargaan pada partisipasi.",
+    "platform": "Platform X.me",
+    "aggregation": "Agregasi Nilai",
+    "activity": "Aktivitas Pengguna",
+    "activityDesc": "Pembuatan konten, interaksi sosial, keterlibatan",
+    "rewards": "Imbalan XMEX",
+    "rewardsDesc": "Memberi insentif pertumbuhan dan partisipasi",
+    "capture": "Penangkapan Nilai",
+    "captureDesc": "Biaya, layanan, dan mekanisme pembakaran",
+    "governance": "Tata Kelola XME",
+    "governanceDesc": "Staking, pemungutan suara, dan kepemilikan jangka panjang"
+  },
+  "allocation": {
+    "title": "Alokasi Token XME",
+    "subtitle": "Model distribusi yang adil dan berkelanjutan yang dirancang untuk menyelaraskan insentif di seluruh pemangku kepentingan.",
+    "totalSupply": "Total Pasokan",
+    "items": {
+      "ecosystem": "Ekosistem & Perbendaharaan",
+      "team": "Tim & Penasihat",
+      "private": "Penjualan Pribadi",
+      "airdrop": "Airdrop",
+      "liquidity": "Likuiditas",
+      "public": "Penjualan Publik"
+    }
+  },
+  "roadmap": {
+    "title": "Peta Jalan",
+    "subtitle": "Jalur strategis kami menuju desentralisasi dan kematangan ekosistem.",
+    "q1_2026": {
+      "title": "Q1 2026: Kejadian",
+      "desc": "TGE, Peluncuran sistem token ganda, Staking dasar"
+    },
+    "q2_2026": {
+      "title": "Q2 2026: Pertumbuhan",
+      "desc": "Penambangan konten aktif, Alat pembuat, Beta aplikasi seluler"
+    },
+    "q3_2026": {
+      "title": "Q3 2026: Ekspansi",
+      "desc": "Tata kelola DAO v1, Jembatan lintas rantai, Pasar NFT"
+    },
+    "q4_2026": {
+      "title": "Q4 2026: Kematangan",
+      "desc": "Desentralisasi penuh, Ekspansi global, API Perusahaan"
+    }
+  },
+  "calculator": {
+    "title": "Kalkulator Imbalan Staking",
+    "subtitle": "Perkirakan potensi pengembalian Anda dengan melakukan staking XMEX.",
+    "amountLabel": "Jumlah Staking (XMEX)",
+    "durationLabel": "Durasi Penguncian",
+    "days": "Hari",
+    "apy": "APY",
+    "estimatedReturns": "Perkiraan Pengembalian",
+    "totalValue": "Nilai Total"
+  },
+  "footer": {
+    "desc": "Membangun masa depan interaksi sosial terdesentralisasi melalui tokenomics yang berkelanjutan.",
+    "resources": "Sumber Daya",
+    "community": "Komunitas",
+    "rights": "© 2026 Yayasan X.me. Hak cipta dilindungi undang-undang."
+  }
+}

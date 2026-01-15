@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "vision": "Tầm nhìn",
+    "dualToken": "Token Kép",
+    "xme": "XME",
+    "xmex": "XMEX",
+    "allocation": "Phân bổ",
+    "roadmap": "Lộ trình",
+    "calculator": "Máy tính",
+    "whitepaper": "Sách trắng",
+    "launchApp": "Mở Ứng dụng"
+  },
+  "hero": {
+    "tag": "Tokenomics v2.0 Đã hoạt động",
+    "title": "Động cơ Kinh tế của",
+    "titleHighlight": "Mạng xã hội Web3",
+    "description": "Mô hình token kép được thiết kế cho sự tăng trưởng bền vững, quản trị cộng đồng và nắm bắt giá trị thực.",
+    "explore": "Khám phá XME",
+    "readWhitepaper": "Đọc Sách trắng"
+  },
+  "dualToken": {
+    "title": "Hai Token, Một Hệ sinh thái",
+    "subtitle": "Tách biệt quản trị khỏi tiện ích để đảm bảo sự ổn định lâu dài và tăng trưởng bền vững.",
+    "xme": {
+      "title": "XME",
+      "type": "TOKEN QUẢN TRỊ",
+      "desc": "Mỏ neo của giá trị và quản trị. Đại diện cho quyền sở hữu, quyền ra quyết định và nắm bắt giá trị lâu dài.",
+      "features": [
+        "Quyền sở hữu & Quản trị nền tảng",
+        "Chia sẻ doanh thu & Phần thưởng Staking",
+        "Mua lại & Đốt giảm phát",
+        "Quyền truy cập cao cấp độc quyền"
+      ]
+    },
+    "xmex": {
+      "title": "XMEX",
+      "type": "TOKEN TIỆN ÍCH",
+      "desc": "Nhiên liệu cho sự tăng trưởng. Thúc đẩy hoạt động hàng ngày, sáng tạo nội dung và tương tác người dùng thông qua nền kinh tế cân bằng.",
+      "features": [
+        "Phần thưởng hoạt động người dùng",
+        "Khuyến khích sáng tạo nội dung",
+        "Thanh toán dịch vụ nền tảng",
+        "Có thể chuyển đổi sang XME (Cơ chế đốt)"
+      ]
+    }
+  },
+  "economy": {
+    "title": "Bánh đà Kinh tế",
+    "subtitle": "Một vòng lặp tự duy trì nơi hoạt động tạo ra giá trị và giá trị thưởng cho sự tham gia.",
+    "platform": "Nền tảng X.me",
+    "aggregation": "Tổng hợp Giá trị",
+    "activity": "Hoạt động Người dùng",
+    "activityDesc": "Sáng tạo nội dung, tương tác xã hội, tham gia",
+    "rewards": "Phần thưởng XMEX",
+    "rewardsDesc": "Khuyến khích tăng trưởng và tham gia",
+    "capture": "Nắm bắt Giá trị",
+    "captureDesc": "Phí, dịch vụ và cơ chế đốt",
+    "governance": "Quản trị XME",
+    "governanceDesc": "Staking, bỏ phiếu và nắm giữ lâu dài"
+  },
+  "allocation": {
+    "title": "Phân bổ Token XME",
+    "subtitle": "Mô hình phân phối công bằng và bền vững được thiết kế để điều chỉnh các ưu đãi giữa tất cả các bên liên quan.",
+    "totalSupply": "Tổng cung",
+    "items": {
+      "ecosystem": "Hệ sinh thái & Kho bạc",
+      "team": "Đội ngũ & Cố vấn",
+      "private": "Bán riêng",
+      "airdrop": "Airdrop",
+      "liquidity": "Thanh khoản",
+      "public": "Bán công khai"
+    }
+  },
+  "roadmap": {
+    "title": "Lộ trình",
+    "subtitle": "Con đường chiến lược của chúng tôi hướng tới phi tập trung hóa và sự trưởng thành của hệ sinh thái.",
+    "q1_2026": {
+      "title": "Q1 2026: Khởi nguyên",
+      "desc": "TGE, Ra mắt hệ thống token kép, Staking cơ bản"
+    },
+    "q2_2026": {
+      "title": "Q2 2026: Tăng trưởng",
+      "desc": "Khai thác nội dung hoạt động, Công cụ sáng tạo, Ứng dụng di động Beta"
+    },
+    "q3_2026": {
+      "title": "Q3 2026: Mở rộng",
+      "desc": "Quản trị DAO v1, Cầu nối chuỗi chéo, Thị trường NFT"
+    },
+    "q4_2026": {
+      "title": "Q4 2026: Trưởng thành",
+      "desc": "Phi tập trung hóa hoàn toàn, Mở rộng toàn cầu, API Doanh nghiệp"
+    }
+  },
+  "calculator": {
+    "title": "Máy tính Lợi nhuận Staking",
+    "subtitle": "Ước tính lợi nhuận tiềm năng của bạn bằng cách staking XMEX.",
+    "amountLabel": "Số lượng Staking (XMEX)",
+    "durationLabel": "Thời gian khóa",
+    "days": "Ngày",
+    "apy": "APY",
+    "estimatedReturns": "Lợi nhuận ước tính",
+    "totalValue": "Tổng giá trị"
+  },
+  "footer": {
+    "desc": "Xây dựng tương lai của tương tác xã hội phi tập trung thông qua tokenomics bền vững.",
+    "resources": "Tài nguyên",
+    "community": "Cộng đồng",
+    "rights": "© 2026 X.me Foundation. Đã đăng ký bản quyền."
+  }
+}

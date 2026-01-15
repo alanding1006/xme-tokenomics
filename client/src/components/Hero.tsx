@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Elements */}
@@ -23,23 +26,23 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
             </span>
-            Tokenomics v2.0 Live
+            {t("hero.tag")}
           </div>
           
           <h1 className="font-display text-5xl md:text-7xl font-bold leading-tight tracking-tight">
-            The Economic Engine of <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Web3 Social</span>
+            {t("hero.title")} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">{t("hero.titleHighlight")}</span>
           </h1>
           
           <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
-            A dual-token model designed for sustainable growth, community governance, and real value capture.
+            {t("hero.description")}
           </p>
           
           <div className="flex flex-wrap gap-4">
             <Button size="lg" className="h-12 px-8 text-lg bg-primary hover:bg-primary/90">
-              Explore XME
+              {t("hero.explore")}
             </Button>
             <Button size="lg" variant="outline" className="h-12 px-8 text-lg border-white/10 hover:bg-white/5">
-              Read Whitepaper
+              {t("hero.readWhitepaper")}
             </Button>
           </div>
         </motion.div>
