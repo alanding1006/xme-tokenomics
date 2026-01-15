@@ -46,7 +46,7 @@ export default function AllocationChart() {
                     backgroundColor: 'var(--popover)', 
                     borderColor: 'var(--border)',
                     borderRadius: 'var(--radius)',
-                    color: 'var(--popover-foreground)'
+                    color: '#ffffff'
                   }}
                 />
               </PieChart>

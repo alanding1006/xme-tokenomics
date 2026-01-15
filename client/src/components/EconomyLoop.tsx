@@ -47,7 +47,7 @@ export default function EconomyLoop() {
           </p>
         </div>
 
-        <div className="relative max-w-5xl mx-auto aspect-[4/3] md:aspect-[16/9] bg-black/40 rounded-3xl border border-white/10 p-4 md:p-8 flex items-center justify-center overflow-hidden backdrop-blur-sm">
+        <div className="relative max-w-5xl mx-auto aspect-[4/3] md:aspect-[16/9] bg-black/40 rounded-3xl border border-white/10 p-4 md:p-8 flex items-center justify-center overflow-hidden backdrop-blur-sm isolate">
           
           {/* Central Reactor Core */}
           <div className="absolute inset-0 flex items-center justify-center z-20">
@@ -60,7 +60,7 @@ export default function EconomyLoop() {
             >
               {/* Core Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-xl" />
-              <div className="absolute inset-0 bg-black/80 rounded-full border border-white/10 backdrop-blur-md flex flex-col items-center justify-center z-10">
+              <div className="absolute inset-0 bg-black/40 rounded-full border border-white/10 backdrop-blur-sm flex flex-col items-center justify-center z-10">
                 <h3 className="font-display text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-white to-white/80">X.me</h3>
                 <p className="text-xs md:text-sm text-muted-foreground mt-1">{t("economy.platform")}</p>
               </div>
@@ -90,7 +90,7 @@ export default function EconomyLoop() {
 
             {/* Main Circuit Path */}
             <path
-              d="M400,80 C550,80 700,150 700,225 C700,300 550,370 400,370 C250,370 100,300 100,225 C100,150 250,80 400,80"
+              d="M400,100 C530,100 650,160 650,225 C650,290 530,350 400,350 C270,350 150,290 150,225 C150,160 270,100 400,100"
               fill="none"
               stroke="rgba(255,255,255,0.1)"
               strokeWidth="2"
@@ -98,7 +98,7 @@ export default function EconomyLoop() {
 
             {/* Animated Energy Pulses */}
             <motion.path
-              d="M400,80 C550,80 700,150 700,225 C700,300 550,370 400,370 C250,370 100,300 100,225 C100,150 250,80 400,80"
+              d="M400,100 C530,100 650,160 650,225 C650,290 530,350 400,350 C270,350 150,290 150,225 C150,160 270,100 400,100"
               fill="none"
               stroke="url(#energy-gradient)"
               strokeWidth="4"
@@ -111,7 +111,7 @@ export default function EconomyLoop() {
             
             {/* Secondary Pulse (Offset) */}
             <motion.path
-              d="M400,80 C550,80 700,150 700,225 C700,300 550,370 400,370 C250,370 100,300 100,225 C100,150 250,80 400,80"
+              d="M400,100 C530,100 650,160 650,225 C650,290 530,350 400,350 C270,350 150,290 150,225 C150,160 270,100 400,100"
               fill="none"
               stroke="url(#energy-gradient)"
               strokeWidth="4"
@@ -126,7 +126,7 @@ export default function EconomyLoop() {
           {/* Interactive Nodes */}
           <div className="absolute inset-0 z-10">
             {/* Top Node: User Activity */}
-            <div className="absolute top-[10%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group">
+            <div className="absolute top-[15%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group z-20">
               <motion.div 
                 className="w-16 h-16 rounded-full bg-black border-2 border-secondary flex items-center justify-center shadow-[0_0_20px_rgba(6,182,212,0.3)] cursor-pointer relative overflow-hidden"
                 variants={nodeVariants}
@@ -144,7 +144,7 @@ export default function EconomyLoop() {
             </div>
 
             {/* Right Node: XMEX Rewards */}
-            <div className="absolute top-1/2 right-[5%] translate-x-0 -translate-y-1/2 flex flex-col items-center group">
+            <div className="absolute top-1/2 right-[8%] translate-x-0 -translate-y-1/2 flex flex-col items-center group z-20">
               <motion.div 
                 className="w-16 h-16 rounded-full bg-black border-2 border-secondary flex items-center justify-center shadow-[0_0_20px_rgba(6,182,212,0.3)] cursor-pointer relative overflow-hidden"
                 variants={nodeVariants}
@@ -163,7 +163,7 @@ export default function EconomyLoop() {
             </div>
 
             {/* Bottom Node: Value Capture */}
-            <div className="absolute bottom-[10%] left-1/2 -translate-x-1/2 translate-y-1/2 flex flex-col-reverse items-center group">
+            <div className="absolute bottom-[15%] left-1/2 -translate-x-1/2 translate-y-1/2 flex flex-col-reverse items-center group z-20">
               <motion.div 
                 className="w-16 h-16 rounded-full bg-black border-2 border-primary flex items-center justify-center shadow-[0_0_20px_rgba(79,70,229,0.3)] cursor-pointer relative overflow-hidden"
                 variants={nodeVariants}
@@ -182,7 +182,7 @@ export default function EconomyLoop() {
             </div>
 
             {/* Left Node: XME Governance */}
-            <div className="absolute top-1/2 left-[5%] translate-x-0 -translate-y-1/2 flex flex-col items-center group">
+            <div className="absolute top-1/2 left-[8%] translate-x-0 -translate-y-1/2 flex flex-col items-center group z-20">
               <motion.div 
                 className="w-16 h-16 rounded-full bg-black border-2 border-primary flex items-center justify-center shadow-[0_0_20px_rgba(79,70,229,0.3)] cursor-pointer relative overflow-hidden"
                 variants={nodeVariants}
