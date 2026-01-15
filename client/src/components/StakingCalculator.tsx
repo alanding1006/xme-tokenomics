@@ -1,10 +1,9 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
-import { motion } from "framer-motion";
 import { Calculator, TrendingUp } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
+import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip, TooltipProps } from "recharts";
 
 const DURATIONS = [
   { days: 30, apy: 0.08 },
@@ -12,6 +11,25 @@ const DURATIONS = [
   { days: 90, apy: 0.12 },
   { days: 180, apy: 0.15 },
 ];
+
+// Custom Tooltip Component
+const CustomTooltip = ({ active, payload }: TooltipProps<number, string>) => {
+  if (active && payload && payload.length) {
+    const data = payload[0].payload;
+    return (
+      <div className="bg-black/90 backdrop-blur-md border border-white/10 p-4 rounded-xl shadow-xl">
+        <div className="flex items-center gap-2 mb-1">
+          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: data.color }} />
+          <p className="text-white font-bold text-sm">{data.name}</p>
+        </div>
+        <p className="text-white/80 font-mono text-xs pl-4">
+          Value: <span className="text-white font-bold">{data.value.toLocaleString(undefined, { maximumFractionDigits: 0 })} XMEX</span>
+        </p>
+      </div>
+    );
+  }
+  return null;
+};
 
 export default function StakingCalculator() {
   const { t } = useTranslation();
@@ -128,15 +146,7 @@ export default function StakingCalculator() {
                     <Cell key={`cell-${index}`} fill={entry.color} />
                   ))}
                 </Pie>
-                <Tooltip
-                  formatter={(value: number) => value.toLocaleString(undefined, { maximumFractionDigits: 0 }) + " XMEX"}
-                  contentStyle={{
-                    backgroundColor: 'var(--popover)',
-                    borderColor: 'var(--border)',
-                    borderRadius: 'var(--radius)',
-                    color: 'var(--popover-foreground)'
-                  }}
-                />
+                <Tooltip content={<CustomTooltip />} />
               </PieChart>
             </ResponsiveContainer>
             
