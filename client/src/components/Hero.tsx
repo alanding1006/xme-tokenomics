@@ -1,12 +1,34 @@
 import { Button } from "@/components/ui/button";
-import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { AnimatePresence, motion, useMotionValue } from "framer-motion";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "wouter";
+import InteractiveParticle from "./InteractiveParticle";
 
 export default function Hero() {
   const { t } = useTranslation();
   const [hoveredToken, setHoveredToken] = useState<"XME" | "XMEX" | null>(null);
+  
+  // Mouse position for parallax effect (normalized from -0.5 to 0.5)
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const { clientX, clientY } = e;
+      const { innerWidth, innerHeight } = window;
+      
+      // Calculate normalized position (-0.5 to 0.5)
+      const x = (clientX / innerWidth) - 0.5;
+      const y = (clientY / innerHeight) - 0.5;
+      
+      mouseX.set(x);
+      mouseY.set(y);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [mouseX, mouseY]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
@@ -32,25 +54,13 @@ export default function Hero() {
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-secondary/20 rounded-full blur-[80px] md:blur-[128px] animate-pulse delay-1000 mix-blend-screen" />
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
         
-        {/* Floating Particles */}
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-white/20 rounded-full"
-            initial={{ 
-              x: Math.random() * 100 + "%", 
-              y: Math.random() * 100 + "%",
-              opacity: Math.random() * 0.5 + 0.1
-            }}
-            animate={{ 
-              y: [null, Math.random() * -100],
-              opacity: [null, 0]
-            }}
-            transition={{ 
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              ease: "linear"
-            }}
+        {/* Interactive Floating Particles */}
+        {[...Array(30)].map((_, i) => (
+          <InteractiveParticle 
+            key={i} 
+            mouseX={mouseX} 
+            mouseY={mouseY} 
+            depth={Math.random() * 2 - 0.5} // Random depth from -0.5 to 1.5 for varied movement
           />
         ))}
       </div>
