@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { Link } from "wouter";
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -42,9 +43,11 @@ export default function Hero() {
             <Button size="lg" className="h-12 px-8 text-lg bg-primary hover:bg-primary/90 w-full sm:w-auto">
               {t("hero.explore")}
             </Button>
-            <Button size="lg" variant="outline" className="h-12 px-8 text-lg border-white/10 hover:bg-white/5 w-full sm:w-auto">
-              {t("hero.readWhitepaper")}
-            </Button>
+            <Link href="/whitepaper">
+              <Button size="lg" variant="outline" className="h-12 px-8 text-lg border-white/10 hover:bg-white/5 w-full sm:w-auto">
+                {t("hero.readWhitepaper")}
+              </Button>
+            </Link>
           </div>
         </motion.div>
 

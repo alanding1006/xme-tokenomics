@@ -3,7 +3,10 @@
 - [x] 开发 XMEX 质押收益计算器
 - [x] 整合与优化
 - [x] 移动端深度适配与性能优化
-- [ ] 重构 Roadmap 内容与完善越南语支持
-    - [ ] 更新 Roadmap 数据结构 (Q1: Foundation, Q2: Growth, Q3: Genesis/TGE, Q4: Expansion)
-    - [ ] 更新所有语言包 (en, zh, th, vi, id) 中的 Roadmap 翻译
-    - [ ] 检查越南语切换功能
+- [x] 重构 Roadmap 内容与完善越南语支持
+- [ ] 翻译并集成白皮书页面
+    - [ ] 读取中文白皮书内容
+    - [ ] 翻译白皮书为英文 Markdown 格式
+    - [ ] 创建 `/whitepaper` 路由和页面组件
+    - [ ] 使用 `Streamdown` 或其他 Markdown 渲染器展示内容
+    - [ ] 更新首页 "Read Whitepaper" 链接
