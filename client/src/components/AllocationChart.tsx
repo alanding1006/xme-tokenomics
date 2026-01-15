@@ -1,5 +1,24 @@
 import { useTranslation } from "react-i18next";
-import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
+import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip, TooltipProps } from "recharts";
+
+// Custom Tooltip Component
+const CustomTooltip = ({ active, payload }: TooltipProps<number, string>) => {
+  if (active && payload && payload.length) {
+    const data = payload[0].payload;
+    return (
+      <div className="bg-black/90 backdrop-blur-md border border-white/10 p-4 rounded-xl shadow-xl">
+        <div className="flex items-center gap-2 mb-1">
+          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: data.color }} />
+          <p className="text-white font-bold text-sm">{data.name}</p>
+        </div>
+        <p className="text-white/80 font-mono text-xs pl-4">
+          Allocation: <span className="text-white font-bold">{data.value}%</span>
+        </p>
+      </div>
+    );
+  }
+  return null;
+};
 
 export default function AllocationChart() {
   const { t } = useTranslation();
@@ -41,14 +60,7 @@ export default function AllocationChart() {
                     <Cell key={`cell-${index}`} fill={entry.color} />
                   ))}
                 </Pie>
-                <Tooltip 
-                  contentStyle={{ 
-                    backgroundColor: 'var(--popover)', 
-                    borderColor: 'var(--border)',
-                    borderRadius: 'var(--radius)',
-                    color: '#ffffff'
-                  }}
-                />
+                <Tooltip content={<CustomTooltip />} />
               </PieChart>
             </ResponsiveContainer>
           </div>
