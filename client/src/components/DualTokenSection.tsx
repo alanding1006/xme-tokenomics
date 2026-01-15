@@ -16,14 +16,15 @@ export default function DualTokenSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
           {/* XME Card */}
           <motion.div
             whileHover={{ y: -10 }}
             transition={{ type: "spring", stiffness: 300 }}
+            className="h-full"
           >
             <Card className="h-full bg-gradient-to-b from-primary/10 to-transparent border-primary/20 overflow-hidden relative group">
-              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none">
                 <Crown size={120} />
               </div>
               <CardHeader>
@@ -34,13 +35,13 @@ export default function DualTokenSection() {
                 <p className="text-sm font-mono text-primary/80">{t("dualToken.xme.type")}</p>
               </CardHeader>
               <CardContent className="space-y-6">
-                <p className="text-lg leading-relaxed">
+                <p className="text-base md:text-lg leading-relaxed">
                   {t("dualToken.xme.desc")}
                 </p>
                 <ul className="space-y-3">
                   {(t("dualToken.xme.features", { returnObjects: true }) as string[]).map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                    <li key={i} className="flex items-start gap-3 text-muted-foreground text-sm md:text-base">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -53,9 +54,10 @@ export default function DualTokenSection() {
           <motion.div
             whileHover={{ y: -10 }}
             transition={{ type: "spring", stiffness: 300 }}
+            className="h-full"
           >
             <Card className="h-full bg-gradient-to-b from-secondary/10 to-transparent border-secondary/20 overflow-hidden relative group">
-              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none">
                 <Coins size={120} />
               </div>
               <CardHeader>
@@ -66,13 +68,13 @@ export default function DualTokenSection() {
                 <p className="text-sm font-mono text-secondary/80">{t("dualToken.xmex.type")}</p>
               </CardHeader>
               <CardContent className="space-y-6">
-                <p className="text-lg leading-relaxed">
+                <p className="text-base md:text-lg leading-relaxed">
                   {t("dualToken.xmex.desc")}
                 </p>
                 <ul className="space-y-3">
                   {(t("dualToken.xmex.features", { returnObjects: true }) as string[]).map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-secondary" />
+                    <li key={i} className="flex items-start gap-3 text-muted-foreground text-sm md:text-base">
+                      <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 flex-shrink-0" />
                       {item}
                     </li>
                   ))}

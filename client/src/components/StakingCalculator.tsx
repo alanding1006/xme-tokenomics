@@ -59,7 +59,7 @@ export default function StakingCalculator() {
                     min={1000}
                     max={1000000}
                     step={1000}
-                    className="py-4"
+                    className="py-6 touch-none" // Increased padding for touch target and added touch-none
                   />
                 </div>
 
@@ -68,19 +68,19 @@ export default function StakingCalculator() {
                   <label className="text-sm font-medium text-muted-foreground">
                     {t("calculator.durationLabel")}
                   </label>
-                  <div className="grid grid-cols-4 gap-2">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                     {DURATIONS.map((d) => (
                       <button
                         key={d.days}
                         onClick={() => setSelectedDuration(d)}
-                        className={`p-3 rounded-lg border text-sm font-medium transition-all ${
+                        className={`p-4 sm:p-3 rounded-lg border text-sm font-medium transition-all min-h-[44px] active:scale-95 ${
                           selectedDuration.days === d.days
                             ? "bg-primary text-primary-foreground border-primary"
                             : "bg-background border-white/10 hover:border-primary/50"
                         }`}
                       >
-                        <div className="font-bold">{d.days} {t("calculator.days")}</div>
-                        <div className="text-xs opacity-80">{(d.apy * 100).toFixed(0)}% APY</div>
+                        <div className="font-bold text-base sm:text-sm">{d.days} {t("calculator.days")}</div>
+                        <div className="text-sm sm:text-xs opacity-80">{(d.apy * 100).toFixed(0)}% APY</div>
                       </button>
                     ))}
                   </div>

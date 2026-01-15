@@ -45,7 +45,7 @@ export default function Roadmap() {
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          {/* Central Line */}
+          {/* Central Line (Desktop) */}
           <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-white/10 -translate-x-1/2 hidden md:block">
             <motion.div
               className="w-full bg-gradient-to-b from-primary to-secondary"
@@ -53,7 +53,15 @@ export default function Roadmap() {
             />
           </div>
 
-          <div className="space-y-12 md:space-y-24">
+          {/* Left Line (Mobile) */}
+          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-white/10 md:hidden">
+            <motion.div
+              className="w-full bg-gradient-to-b from-primary to-secondary"
+              style={{ height: lineHeight }}
+            />
+          </div>
+
+          <div className="space-y-8 md:space-y-24">
             {items.map((item, index) => {
               const isEven = index % 2 === 0;
               return (
@@ -61,13 +69,28 @@ export default function Roadmap() {
                   key={item.key}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  className={`flex flex-col md:flex-row items-center gap-8 ${
+                  viewport={{ once: true, margin: "-50px" }}
+                  className={`flex flex-row md:flex-row items-start md:items-center gap-4 md:gap-8 ${
                     isEven ? "md:flex-row-reverse" : ""
                   }`}
                 >
+                  {/* Icon Node */}
+                  <div className="relative z-10 flex-shrink-0 mt-1 md:mt-0">
+                    <div
+                      className={`w-12 h-12 rounded-full border-4 flex items-center justify-center bg-background ${
+                        item.status === "completed"
+                          ? "border-primary text-primary"
+                          : item.status === "active"
+                          ? "border-primary text-primary shadow-[0_0_20px_rgba(79,70,229,0.5)]"
+                          : "border-muted text-muted-foreground"
+                      }`}
+                    >
+                      <item.icon size={20} strokeWidth={3} />
+                    </div>
+                  </div>
+
                   {/* Content */}
-                  <div className="flex-1 text-center md:text-left">
+                  <div className="flex-1 text-left">
                     <div
                       className={`p-6 rounded-2xl border bg-card/50 backdrop-blur-sm ${
                         item.status === "active"
@@ -101,22 +124,7 @@ export default function Roadmap() {
                     </div>
                   </div>
 
-                  {/* Icon Node */}
-                  <div className="relative z-10 flex-shrink-0">
-                    <div
-                      className={`w-12 h-12 rounded-full border-4 flex items-center justify-center bg-background ${
-                        item.status === "completed"
-                          ? "border-primary text-primary"
-                          : item.status === "active"
-                          ? "border-primary text-primary shadow-[0_0_20px_rgba(79,70,229,0.5)]"
-                          : "border-muted text-muted-foreground"
-                      }`}
-                    >
-                      <item.icon size={20} strokeWidth={3} />
-                    </div>
-                  </div>
-
-                  {/* Spacer for layout balance */}
+                  {/* Spacer for layout balance (Desktop only) */}
                   <div className="flex-1 hidden md:block" />
                 </motion.div>
               );

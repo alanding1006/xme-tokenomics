@@ -8,20 +8,21 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Elements */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-[128px] animate-pulse delay-1000" />
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* Reduced blur radius and size for mobile performance */}
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-primary/20 rounded-full blur-[80px] md:blur-[128px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-secondary/20 rounded-full blur-[80px] md:blur-[128px] animate-pulse delay-1000" />
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
       </div>
 
-      <div className="container relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container relative z-10 grid lg:grid-cols-2 gap-8 md:gap-12 items-center pt-8 md:pt-0">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-8"
+          className="space-y-6 md:space-y-8 text-center lg:text-left"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs md:text-sm font-medium mx-auto lg:mx-0">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
@@ -29,19 +30,19 @@ export default function Hero() {
             {t("hero.tag")}
           </div>
           
-          <h1 className="font-display text-5xl md:text-7xl font-bold leading-tight tracking-tight">
-            {t("hero.title")} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">{t("hero.titleHighlight")}</span>
+          <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold leading-tight tracking-tight">
+            {t("hero.title")} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary block md:inline">{t("hero.titleHighlight")}</span>
           </h1>
           
-          <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed mx-auto lg:mx-0">
             {t("hero.description")}
           </p>
           
-          <div className="flex flex-wrap gap-4">
-            <Button size="lg" className="h-12 px-8 text-lg bg-primary hover:bg-primary/90">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <Button size="lg" className="h-12 px-8 text-lg bg-primary hover:bg-primary/90 w-full sm:w-auto">
               {t("hero.explore")}
             </Button>
-            <Button size="lg" variant="outline" className="h-12 px-8 text-lg border-white/10 hover:bg-white/5">
+            <Button size="lg" variant="outline" className="h-12 px-8 text-lg border-white/10 hover:bg-white/5 w-full sm:w-auto">
               {t("hero.readWhitepaper")}
             </Button>
           </div>
