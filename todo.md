@@ -5,9 +5,5 @@
 - [x] 移动端深度适配与性能优化
 - [x] 重构 Roadmap 内容与完善越南语支持
 - [x] 翻译并集成白皮书页面
-    - [x] 读取中文白皮书内容
-    - [x] 翻译白皮书为英文 Markdown 格式
-    - [x] 创建 `/whitepaper` 路由和页面组件
-    - [x] 使用 `Streamdown` 或其他 Markdown 渲染器展示内容
-    - [x] 更新首页 "Read Whitepaper" 链接
-- [ ] 更新导航栏 "Whitepaper" 链接
+- [x] 更新导航栏 "Whitepaper" 链接
+- [ ] 去除双代币卡片中间的箭头图标

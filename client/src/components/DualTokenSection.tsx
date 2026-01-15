@@ -84,12 +84,7 @@ export default function DualTokenSection() {
           </motion.div>
         </div>
 
-        {/* Connection Arrow */}
-        <div className="hidden md:flex justify-center -mt-8 relative z-10">
-          <div className="bg-background border border-white/10 rounded-full p-2 text-muted-foreground">
-            <ArrowRight size={24} />
-          </div>
-        </div>
+
       </div>
     </section>
   );
