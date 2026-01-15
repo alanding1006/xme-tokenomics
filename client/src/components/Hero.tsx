@@ -95,42 +95,42 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* XME Orbit System (Outer) */}
+            {/* XMEX Orbit System (Outer) */}
             <motion.div 
               className="absolute inset-0 z-10"
               animate={{ rotate: 360 }}
               transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
             >
-              <div className="absolute inset-4 border border-primary/20 rounded-full transform rotate-x-60" />
+              <div className="absolute inset-4 border border-secondary/20 rounded-full transform rotate-x-60" />
               <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-20">
-                {/* Planet XME */}
+                {/* Planet XMEX */}
                 <div className="relative w-full h-full flex items-center justify-center">
-                  <div className="absolute inset-0 bg-primary rounded-full blur-xl opacity-50" />
-                  <div className="relative w-16 h-16 bg-gradient-to-br from-primary to-primary/50 rounded-full shadow-[0_0_30px_rgba(79,70,229,0.6)] flex items-center justify-center border border-white/20">
-                    <span className="font-display font-bold text-white">XME</span>
+                  <div className="absolute inset-0 bg-secondary rounded-full blur-xl opacity-50" />
+                  <div className="relative w-16 h-16 bg-gradient-to-br from-secondary to-secondary/50 rounded-full shadow-[0_0_30px_rgba(6,182,212,0.6)] flex items-center justify-center border border-white/20">
+                    <span className="font-display font-bold text-black text-sm">XMEX</span>
                   </div>
                   {/* Trail Effect */}
-                  <div className="absolute top-1/2 left-1/2 w-32 h-1 bg-gradient-to-r from-primary to-transparent -translate-y-1/2 -translate-x-full opacity-50 blur-sm" />
+                  <div className="absolute top-1/2 left-1/2 w-32 h-1 bg-gradient-to-r from-secondary to-transparent -translate-y-1/2 -translate-x-full opacity-50 blur-sm" />
                 </div>
               </div>
             </motion.div>
 
-            {/* XMEX Orbit System (Inner) */}
+            {/* XME Orbit System (Inner) */}
             <motion.div 
               className="absolute inset-20 z-10"
               animate={{ rotate: -360 }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             >
-              <div className="absolute inset-0 border border-secondary/20 rounded-full transform rotate-y-60" />
+              <div className="absolute inset-0 border border-primary/20 rounded-full transform rotate-y-60" />
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-16">
-                {/* Planet XMEX */}
+                {/* Planet XME */}
                 <div className="relative w-full h-full flex items-center justify-center">
-                  <div className="absolute inset-0 bg-secondary rounded-full blur-xl opacity-50" />
-                  <div className="relative w-12 h-12 bg-gradient-to-br from-secondary to-secondary/50 rounded-full shadow-[0_0_30px_rgba(6,182,212,0.6)] flex items-center justify-center border border-white/20">
-                    <span className="font-display font-bold text-black text-xs">XMEX</span>
+                  <div className="absolute inset-0 bg-primary rounded-full blur-xl opacity-50" />
+                  <div className="relative w-12 h-12 bg-gradient-to-br from-primary to-primary/50 rounded-full shadow-[0_0_30px_rgba(79,70,229,0.6)] flex items-center justify-center border border-white/20">
+                    <span className="font-display font-bold text-white text-xs">XME</span>
                   </div>
                   {/* Trail Effect */}
-                  <div className="absolute top-1/2 left-1/2 w-24 h-1 bg-gradient-to-l from-secondary to-transparent -translate-y-1/2 translate-x-0 opacity-50 blur-sm" />
+                  <div className="absolute top-1/2 left-1/2 w-24 h-1 bg-gradient-to-l from-primary to-transparent -translate-y-1/2 translate-x-0 opacity-50 blur-sm" />
                 </div>
               </div>
             </motion.div>
