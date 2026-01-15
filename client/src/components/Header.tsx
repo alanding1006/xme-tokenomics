@@ -25,9 +25,11 @@ export default function Header() {
 
         <div className="flex items-center gap-4">
           <LanguageSwitcher />
-          <Button variant="outline" className="hidden sm:flex border-primary/50 hover:bg-primary/10 hover:text-primary-foreground">
-            {t("nav.whitepaper")}
-          </Button>
+          <Link href="/whitepaper">
+            <Button variant="outline" className="hidden sm:flex border-primary/50 hover:bg-primary/10 hover:text-primary-foreground">
+              {t("nav.whitepaper")}
+            </Button>
+          </Link>
           <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
             {t("nav.launchApp")}
           </Button>
