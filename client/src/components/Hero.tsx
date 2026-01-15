@@ -14,6 +14,28 @@ export default function Hero() {
         <div className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-primary/20 rounded-full blur-[80px] md:blur-[128px] animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-secondary/20 rounded-full blur-[80px] md:blur-[128px] animate-pulse delay-1000" />
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+        
+        {/* Floating Particles */}
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1 h-1 bg-white/20 rounded-full"
+            initial={{ 
+              x: Math.random() * 100 + "%", 
+              y: Math.random() * 100 + "%",
+              opacity: Math.random() * 0.5 + 0.1
+            }}
+            animate={{ 
+              y: [null, Math.random() * -100],
+              opacity: [null, 0]
+            }}
+            transition={{ 
+              duration: Math.random() * 10 + 10,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          />
+        ))}
       </div>
 
       <div className="container relative z-10 grid lg:grid-cols-2 gap-8 md:gap-12 items-center pt-8 md:pt-0">
@@ -40,7 +62,7 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Button size="lg" className="h-12 px-8 text-lg bg-primary hover:bg-primary/90 w-full sm:w-auto">
+            <Button size="lg" className="h-12 px-8 text-lg bg-primary hover:bg-primary/90 w-full sm:w-auto shadow-[0_0_20px_rgba(79,70,229,0.3)] hover:shadow-[0_0_30px_rgba(79,70,229,0.5)] transition-shadow">
               {t("hero.explore")}
             </Button>
             <Link href="/whitepaper">
@@ -55,39 +77,64 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative hidden lg:block"
+          className="relative hidden lg:block perspective-[1000px]"
         >
-          {/* Abstract representation of the dual token system */}
-          <div className="relative w-full aspect-square">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full border border-white/5 backdrop-blur-sm" />
+          {/* Interstellar Gravity Field Animation */}
+          <div className="relative w-full aspect-square transform-style-3d rotate-x-12 rotate-y-12">
             
-            {/* XME Orbit */}
+            {/* Central Energy Core */}
+            <div className="absolute inset-0 flex items-center justify-center z-20">
+              <div className="relative w-32 h-32">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-2xl opacity-40 animate-pulse" />
+                <div className="absolute inset-0 bg-white/5 rounded-full backdrop-blur-md border border-white/20 flex items-center justify-center shadow-[0_0_50px_rgba(255,255,255,0.1)]">
+                  <span className="font-display text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-white to-white/70">X.me</span>
+                </div>
+                {/* Core Rings */}
+                <div className="absolute inset-[-10px] border border-white/10 rounded-full animate-[spin_10s_linear_infinite]" />
+                <div className="absolute inset-[-20px] border border-white/5 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
+              </div>
+            </div>
+
+            {/* XME Orbit System (Outer) */}
             <motion.div 
+              className="absolute inset-0 z-10"
               animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-12 border border-dashed border-primary/30 rounded-full"
+              transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
             >
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-primary rounded-full shadow-[0_0_30px_rgba(79,70,229,0.5)] flex items-center justify-center font-display font-bold text-white">
-                XME
+              <div className="absolute inset-4 border border-primary/20 rounded-full transform rotate-x-60" />
+              <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-20">
+                {/* Planet XME */}
+                <div className="relative w-full h-full flex items-center justify-center">
+                  <div className="absolute inset-0 bg-primary rounded-full blur-xl opacity-50" />
+                  <div className="relative w-16 h-16 bg-gradient-to-br from-primary to-primary/50 rounded-full shadow-[0_0_30px_rgba(79,70,229,0.6)] flex items-center justify-center border border-white/20">
+                    <span className="font-display font-bold text-white">XME</span>
+                  </div>
+                  {/* Trail Effect */}
+                  <div className="absolute top-1/2 left-1/2 w-32 h-1 bg-gradient-to-r from-primary to-transparent -translate-y-1/2 -translate-x-full opacity-50 blur-sm" />
+                </div>
               </div>
             </motion.div>
 
-            {/* XMEX Orbit */}
+            {/* XMEX Orbit System (Inner) */}
             <motion.div 
+              className="absolute inset-20 z-10"
               animate={{ rotate: -360 }}
-              transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-32 border border-dashed border-secondary/30 rounded-full"
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             >
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-12 h-12 bg-secondary rounded-full shadow-[0_0_30px_rgba(6,182,212,0.5)] flex items-center justify-center font-display font-bold text-black text-sm">
-                XMEX
+              <div className="absolute inset-0 border border-secondary/20 rounded-full transform rotate-y-60" />
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-16">
+                {/* Planet XMEX */}
+                <div className="relative w-full h-full flex items-center justify-center">
+                  <div className="absolute inset-0 bg-secondary rounded-full blur-xl opacity-50" />
+                  <div className="relative w-12 h-12 bg-gradient-to-br from-secondary to-secondary/50 rounded-full shadow-[0_0_30px_rgba(6,182,212,0.6)] flex items-center justify-center border border-white/20">
+                    <span className="font-display font-bold text-black text-xs">XMEX</span>
+                  </div>
+                  {/* Trail Effect */}
+                  <div className="absolute top-1/2 left-1/2 w-24 h-1 bg-gradient-to-l from-secondary to-transparent -translate-y-1/2 translate-x-0 opacity-50 blur-sm" />
+                </div>
               </div>
             </motion.div>
             
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-32 h-32 bg-white/5 rounded-full backdrop-blur-md border border-white/10 flex items-center justify-center">
-                <span className="font-display text-2xl font-bold">X.me</span>
-              </div>
-            </div>
           </div>
         </motion.div>
       </div>
