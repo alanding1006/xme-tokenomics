@@ -52,7 +52,7 @@ export default function EconomyLoop() {
           {/* Central Reactor Core */}
           <div className="absolute inset-0 flex items-center justify-center z-20">
             <motion.div 
-              className="relative w-40 h-40 md:w-48 md:h-48 flex items-center justify-center"
+              className="relative w-40 h-40 md:w-48 md:h-48 flex items-center justify-center rounded-full"
               animate={{ 
                 boxShadow: ["0 0 20px rgba(79,70,229,0.2)", "0 0 60px rgba(79,70,229,0.4)", "0 0 20px rgba(79,70,229,0.2)"] 
               }}
@@ -60,7 +60,7 @@ export default function EconomyLoop() {
             >
               {/* Core Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-xl" />
-              <div className="absolute inset-0 bg-black/40 rounded-full border border-white/10 backdrop-blur-sm flex flex-col items-center justify-center z-10">
+              <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
                 <h3 className="font-display text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-white to-white/80">X.me</h3>
                 <p className="text-xs md:text-sm text-muted-foreground mt-1">{t("economy.platform")}</p>
               </div>
