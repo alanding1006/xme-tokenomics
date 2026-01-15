@@ -75,20 +75,20 @@
     "title": "Lộ trình",
     "subtitle": "Con đường chiến lược của chúng tôi hướng tới phi tập trung hóa và sự trưởng thành của hệ sinh thái.",
     "q1_2026": {
-      "title": "Q1 2026: Khởi nguyên",
-      "desc": "TGE, Ra mắt hệ thống token kép, Staking cơ bản"
+      "title": "Q1 2026: Foundation",
+      "desc": "Phát triển nền tảng, Kiểm toán Smart Contract, Thử nghiệm Alpha"
     },
     "q2_2026": {
-      "title": "Q2 2026: Tăng trưởng",
-      "desc": "Khai thác nội dung hoạt động, Công cụ sáng tạo, Ứng dụng di động Beta"
+      "title": "Q2 2026: Growth",
+      "desc": "Chiến dịch thu hút người dùng, Chương trình Đại sứ toàn cầu, Ưu đãi Testnet"
     },
     "q3_2026": {
-      "title": "Q3 2026: Mở rộng",
-      "desc": "Quản trị DAO v1, Cầu nối chuỗi chéo, Thị trường NFT"
+      "title": "Q3 2026: Genesis",
+      "desc": "TGE (Sự kiện tạo Token), Ra mắt Mainnet, Mở Staking & Giao dịch"
     },
     "q4_2026": {
-      "title": "Q4 2026: Trưởng thành",
-      "desc": "Phi tập trung hóa hoàn toàn, Mở rộng toàn cầu, API Doanh nghiệp"
+      "title": "Q4 2026: Expansion",
+      "desc": "Ra mắt quản trị DAO, Quỹ hệ sinh thái, Tích hợp Cross-chain"
     }
   },
   "calculator": {

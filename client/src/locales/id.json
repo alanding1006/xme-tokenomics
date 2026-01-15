@@ -75,20 +75,20 @@
     "title": "Peta Jalan",
     "subtitle": "Jalur strategis kami menuju desentralisasi dan kematangan ekosistem.",
     "q1_2026": {
-      "title": "Q1 2026: Kejadian",
-      "desc": "TGE, Peluncuran sistem token ganda, Staking dasar"
+      "title": "Q1 2026: Foundation",
+      "desc": "Pengembangan platform, Audit Smart Contract, Pengujian Alpha"
     },
     "q2_2026": {
-      "title": "Q2 2026: Pertumbuhan",
-      "desc": "Penambangan konten aktif, Alat pembuat, Beta aplikasi seluler"
+      "title": "Q2 2026: Growth",
+      "desc": "Kampanye akuisisi pengguna, Program Duta Global, Insentif Testnet"
     },
     "q3_2026": {
-      "title": "Q3 2026: Ekspansi",
-      "desc": "Tata kelola DAO v1, Jembatan lintas rantai, Pasar NFT"
+      "title": "Q3 2026: Genesis",
+      "desc": "TGE (Token Generation Event), Peluncuran Mainnet, Staking & Perdagangan aktif"
     },
     "q4_2026": {
-      "title": "Q4 2026: Kematangan",
-      "desc": "Desentralisasi penuh, Ekspansi global, API Perusahaan"
+      "title": "Q4 2026: Expansion",
+      "desc": "Peluncuran tata kelola DAO, Hibah ekosistem, Integrasi lintas rantai"
     }
   },
   "calculator": {

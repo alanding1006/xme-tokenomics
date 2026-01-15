@@ -2,10 +2,8 @@
 - [x] 开发动态路线图组件
 - [x] 开发 XMEX 质押收益计算器
 - [x] 整合与优化
-- [ ] 移动端深度适配与性能优化
-    - [ ] 优化 Hero 区域移动端布局 (字体大小, 间距)
-    - [ ] 优化 Roadmap 组件移动端显示 (垂直时间轴适配)
-    - [ ] 优化 StakingCalculator 移动端交互 (滑块, 按钮大小)
-    - [ ] 优化 DualTokenSection 卡片移动端堆叠效果
-    - [ ] 性能优化: 减少移动端动画复杂度 (使用 useReducedMotion 或媒体查询)
-    - [ ] 增大移动端点击热区 (min-height 44px)
+- [x] 移动端深度适配与性能优化
+- [ ] 重构 Roadmap 内容与完善越南语支持
+    - [ ] 更新 Roadmap 数据结构 (Q1: Foundation, Q2: Growth, Q3: Genesis/TGE, Q4: Expansion)
+    - [ ] 更新所有语言包 (en, zh, th, vi, id) 中的 Roadmap 翻译
+    - [ ] 检查越南语切换功能

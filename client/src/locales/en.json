@@ -75,20 +75,20 @@
     "title": "Roadmap",
     "subtitle": "Our strategic path to decentralization and ecosystem maturity.",
     "q1_2026": {
-      "title": "Q1 2026: Genesis",
-      "desc": "TGE, Dual-token system launch, Basic staking"
+      "title": "Q1 2026: Foundation",
+      "desc": "Platform development, Smart contract audit, Alpha testing"
     },
     "q2_2026": {
       "title": "Q2 2026: Growth",
-      "desc": "Content mining live, Creator tools, Mobile app beta"
+      "desc": "User acquisition campaigns, Global ambassador program, Testnet incentives"
     },
     "q3_2026": {
-      "title": "Q3 2026: Expansion",
-      "desc": "DAO governance v1, Cross-chain bridge, NFT marketplace"
+      "title": "Q3 2026: Genesis",
+      "desc": "TGE (Token Generation Event), Mainnet launch, Staking & Trading live"
     },
     "q4_2026": {
-      "title": "Q4 2026: Maturity",
-      "desc": "Full decentralization, Global expansion, Enterprise API"
+      "title": "Q4 2026: Expansion",
+      "desc": "DAO governance launch, Ecosystem grants, Cross-chain integration"
     }
   },
   "calculator": {
