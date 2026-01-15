@@ -47,13 +47,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="space-y-6 md:space-y-8 text-center lg:text-left"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs md:text-sm font-medium mx-auto lg:mx-0">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-            </span>
-            {t("hero.tag")}
-          </div>
+
           
           <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold leading-tight tracking-tight">
             {t("hero.title")} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary block md:inline">{t("hero.titleHighlight")}</span>
