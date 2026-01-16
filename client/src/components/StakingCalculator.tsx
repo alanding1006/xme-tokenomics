@@ -6,10 +6,10 @@ import { useTranslation } from "react-i18next";
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip, TooltipProps } from "recharts";
 
 const DURATIONS = [
-  { days: 30, apy: 0.08 },
-  { days: 60, apy: 0.10 },
-  { days: 90, apy: 0.12 },
-  { days: 180, apy: 0.15 },
+  { days: 30, apy: 0.10 },
+  { days: 60, apy: 0.20 },
+  { days: 90, apy: 0.30 },
+  { days: 180, apy: 1.00 },
 ];
 
 // Custom Tooltip Component
