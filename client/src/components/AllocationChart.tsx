@@ -24,12 +24,12 @@ export default function AllocationChart() {
   const { t } = useTranslation();
 
   const data = [
-    { name: t("allocation.items.ecosystem"), value: 30, color: "var(--primary)" },
+    { name: t("allocation.items.ecosystem"), value: 25, color: "var(--primary)" },
+    { name: t("allocation.items.airdrop"), value: 15, color: "#34d399" },
     { name: t("allocation.items.team"), value: 15, color: "var(--secondary)" },
     { name: t("allocation.items.private"), value: 10, color: "#818cf8" },
-    { name: t("allocation.items.airdrop"), value: 5, color: "#34d399" },
     { name: t("allocation.items.liquidity"), value: 10, color: "#fbbf24" },
-    { name: t("allocation.items.public"), value: 30, color: "#f472b6" },
+    { name: t("allocation.items.public"), value: 25, color: "#f472b6" },
   ];
 
   return (
