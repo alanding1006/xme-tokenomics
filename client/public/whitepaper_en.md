@@ -1,8 +1,8 @@
 # X.me Dual-Token Economic Model Whitepaper
 
-**Version: 2.0**
+**Version: 2.1**
 
-**Date: January 14, 2026**
+**Date: January 19, 2026**
 
 ## 1. Vision & Executive Summary
 
@@ -76,12 +76,12 @@ XMEX acts like a powerful growth machine, continuously injecting vitality into t
 
 | Allocation | Percentage | Lock-up & Release Rules (Post-TGE) |
 | :--- | :--- | :--- |
-| **Ecosystem / Community Treasury** | 40% | Used for long-term ecosystem building, developer incentives, and community contribution rewards. 10% unlocked at TGE, remainder linearly released over the next 36 months. |
-| **Core Team & Advisors** | 20% | Fully locked for 12 months, then linearly released over 36 months, deeply binding with the platform's long-term development. |
-| **Private Sale & Strategic Investors** | 15% | Locked for 6-12 months, then linearly released over 24 months, ensuring a long-term perspective from partners. |
-| **Marketing & Liquidity** | 10% | Used for initial liquidity provision, exchange partnerships, and marketing promotion, released prudently based on market demand. |
-| **Public Sale** | 5% | Fully unlocked at TGE, targeting the broadest base of community supporters. |
-| **Early Users & Community Airdrop** | 10% | Airdropped in batches and conditionally based on early users' historical contribution and activity, rewarding pioneers. |
+| **Ecosystem & Treasury** | 25% | Used for long-term ecosystem building, developer incentives, and community contribution rewards. 10% unlocked at TGE, remainder linearly released over the next 48 months. |
+| **Public Sale** | 25% | Fully unlocked at TGE, targeting the broadest base of community supporters to ensure wide distribution and decentralization. |
+| **User Incentive Airdrop** | 15% | Airdropped in phases to early adopters and active community members. 5% at TGE, remaining 10% vested over 12 months based on activity milestones. |
+| **Core Team & Advisors** | 15% | Fully locked for 12 months, then linearly released over 36 months, deeply binding with the platform's long-term development. |
+| **Private Sale** | 10% | Locked for 6-12 months, then linearly released over 24 months, ensuring a long-term perspective from strategic partners. |
+| **Liquidity Provision** | 10% | Used for initial liquidity provision on DEX/CEX and market making, released prudently based on market demand. |
 
 ### XMEX Total Supply: 100 Billion (Initial Total)
 
