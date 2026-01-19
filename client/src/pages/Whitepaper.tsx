@@ -15,7 +15,8 @@ export default function Whitepaper() {
   const articleRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    fetch('/whitepaper_en.md')
+    // Add timestamp to prevent caching
+    fetch(`/whitepaper_en.md?t=${new Date().getTime()}`)
       .then(res => res.text())
       .then(text => setContent(text));
   }, []);
