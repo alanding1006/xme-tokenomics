@@ -74,14 +74,7 @@ XMEX acts like a powerful growth machine, continuously injecting vitality into t
 
 ### XME Total Supply: 1 Billion (Fixed)
 
-| Allocation | Percentage | Lock-up & Release Rules (Post-TGE) |
-| :--- | :--- | :--- |
-| **Ecosystem & Treasury** | 25% | Used for long-term ecosystem building, developer incentives, and community contribution rewards. 10% unlocked at TGE, remainder linearly released over the next 48 months. |
-| **Public Sale** | 25% | Fully unlocked at TGE, targeting the broadest base of community supporters to ensure wide distribution and decentralization. |
-| **User Incentive Airdrop** | 15% | Airdropped in phases to early adopters and active community members. 5% at TGE, remaining 10% vested over 12 months based on activity milestones. |
-| **Core Team & Advisors** | 15% | Fully locked for 12 months, then linearly released over 36 months, deeply binding with the platform's long-term development. |
-| **Private Sale** | 10% | Locked for 6-12 months, then linearly released over 24 months, ensuring a long-term perspective from strategic partners. |
-| **Liquidity Provision** | 10% | Used for initial liquidity provision on DEX/CEX and market making, released prudently based on market demand. |
+<!-- ALLOCATION_CHART_PLACEHOLDER -->
 
 ### XMEX Total Supply: 100 Billion (Initial Total)
 

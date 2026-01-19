@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip, TooltipProps } from "recharts";
-import VestingSchedule from "./VestingSchedule";
 
 // Custom Tooltip Component
 const CustomTooltip = ({ active, payload }: TooltipProps<number, string>) => {
@@ -43,7 +42,7 @@ export default function AllocationChart() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-24">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="h-[300px] md:h-[400px] w-full">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
@@ -81,9 +80,6 @@ export default function AllocationChart() {
             </div>
           </div>
         </div>
-
-        {/* Vesting Schedule Component */}
-        <VestingSchedule />
       </div>
     </section>
   );
