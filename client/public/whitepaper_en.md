@@ -74,7 +74,14 @@ XMEX acts like a powerful growth machine, continuously injecting vitality into t
 
 ### XME Total Supply: 1 Billion (Fixed)
 
-<!-- ALLOCATION_CHART_PLACEHOLDER -->
+| Allocation | Percentage |
+| :--- | :--- |
+| **Ecosystem & Treasury** | 25% |
+| **Public Sale** | 25% |
+| **User Incentive Airdrop** | 15% |
+| **Core Team & Advisors** | 15% |
+| **Private Sale** | 10% |
+| **Liquidity Provision** | 10% |
 
 ### XMEX Total Supply: 100 Billion (Initial Total)
 

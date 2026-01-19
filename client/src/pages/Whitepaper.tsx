@@ -7,7 +7,6 @@ import { ArrowLeft, Download, List, ChevronRight } from 'lucide-react';
 import { Link } from 'wouter';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import AllocationChart from '@/components/AllocationChart';
 
 export default function Whitepaper() {
   const [content, setContent] = useState('');
@@ -60,26 +59,6 @@ export default function Whitepaper() {
       setActiveSection(id);
       setIsTocOpen(false);
     }
-  };
-
-  // Custom renderer to inject React components
-  const renderContent = (markdown: string) => {
-    // Split content by the placeholder for Allocation Chart
-    const parts = markdown.split('<!-- ALLOCATION_CHART_PLACEHOLDER -->');
-    
-    if (parts.length === 1) {
-      return <Streamdown>{markdown}</Streamdown>;
-    }
-
-    return (
-      <>
-        <Streamdown>{parts[0]}</Streamdown>
-        <div className="my-12 -mx-6 md:-mx-12 bg-black/20 border-y border-white/5">
-          <AllocationChart />
-        </div>
-        <Streamdown>{parts[1]}</Streamdown>
-      </>
-    );
   };
 
   return (
@@ -204,7 +183,7 @@ export default function Whitepaper() {
                 </Button>
               </Link>
             </div>
-            {renderContent(content)}
+            <Streamdown>{content}</Streamdown>
           </article>
         </div>
       </main>
