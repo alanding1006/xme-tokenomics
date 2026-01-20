@@ -18,24 +18,47 @@ export default function Whitepaper() {
     // Add timestamp to prevent caching
     fetch(`/whitepaper_en.md?t=${new Date().getTime()}`)
       .then(res => res.text())
-      .then(text => setContent(text));
+      .then(text => {
+        // Manually inject IDs into headings for TOC navigation
+        // This regex finds ## Heading and replaces it with ## Heading <a id="heading-slug"></a>
+        // or we can just rely on the fact that Streamdown might not support IDs, 
+        // so we pre-process the markdown to add HTML anchors if Streamdown supports HTML.
+        // A safer bet with Streamdown (which is simple) is to wrap the content in a way that we can target.
+        // But since we want to keep Streamdown, let's try to inject HTML anchors which are valid Markdown.
+        
+        const processedText = text.replace(/^##\s+(.+)$/gm, (match, title) => {
+          const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+          // Inject an invisible anchor div above the heading to serve as scroll target
+          return `<div id="${slug}" style="position: relative; top: -100px; visibility: hidden;"></div>\n\n## ${title}`;
+        });
+        
+        setContent(processedText);
+      });
   }, []);
 
-  // Extract headings for TOC
+  // Extract headings for TOC from the original text (we can parse the processed text too)
+  // We need to be careful not to extract the HTML we just added.
+  // The regex `^##\s+(.+)$` will still match `## Title` even if preceded by HTML on previous line.
   const headings = content.match(/^##\s+(.+)$/gm)?.map(h => h.replace(/^##\s+/, '')) || [];
 
   // Handle scroll spy
   useEffect(() => {
     const handleScroll = () => {
-      if (!articleRef.current) return;
+      // We need to find the anchor divs we injected
+      // They have IDs matching the slugs
       
-      const headingElements = articleRef.current.querySelectorAll('h2');
+      const anchors = document.querySelectorAll('div[id]');
       let current = '';
       
-      headingElements.forEach((h2) => {
-        const rect = h2.getBoundingClientRect();
-        if (rect.top < 150) {
-          current = h2.id;
+      anchors.forEach((anchor) => {
+        // Filter out non-TOC IDs if necessary, but our slugs are specific enough usually
+        // or we can check if it's inside articleRef
+        if (articleRef.current && articleRef.current.contains(anchor)) {
+            const rect = anchor.getBoundingClientRect();
+            // Since the anchor is positioned -100px top, when it crosses viewport top it's "active"
+            if (rect.top < 150) { 
+                current = anchor.id;
+            }
         }
       });
       
@@ -49,14 +72,11 @@ export default function Whitepaper() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const offset = 100; // Header height + padding
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      // The element is the anchor div which already has top: -100px offset logic if we used CSS
+      // But here we injected inline style top: -100px which affects layout flow if not absolute.
+      // Let's just scroll to it. Since it's an empty div above the header.
       
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
+      element.scrollIntoView({ behavior: 'smooth' });
       setActiveSection(id);
       setIsTocOpen(false);
     }
