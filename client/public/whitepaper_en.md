@@ -1,9 +1,5 @@
 # X.me Dual-Token Economic Model Whitepaper
 
-**Version: 2.1**
-
-**Date: January 19, 2026**
-
 ## 1. Vision & Executive Summary
 
 As a pioneer in the Web3 ecosystem, X.me is dedicated to building a community-driven content and social platform where trust is built on shared vision and exchange. We firmly believe that a robust economic model is the cornerstone of realizing this vision. This whitepaper details the dual-token (XME/XMEX) economic model designed as the core of the X.me platform. This model not only draws on the best practices of the existing Web3 ecosystem but also realizes profound thinking about the Web3 ecological business ecosystem.
@@ -94,17 +90,17 @@ X.me has designed a complete growth incentive system for users, encouraging cont
 
 User growth on the platform is designed as a clear, sustainable process. This design aims to:
 
--   Provide users with clear participation goals and a sense of achievement
--   Incentivize users for long-term investment and deep participation
--   Give corresponding rights and returns based on the user's contribution level
+-   **Provide users with clear participation goals and a sense of achievement**
+-   **Incentivize users for long-term investment and deep participation**
+-   **Give corresponding rights and returns based on the user's contribution level**
 
 ### 6.2 Behavior Incentive Mechanism
 
 The platform includes users' multi-dimensional behaviors (such as viewing, interacting, creating, inviting, etc.) in the incentive scope. Different types of behaviors contribute differently to the ecosystem, so the incentives obtained will also vary. This design ensures:
 
--   Every beneficial behavior of users can be rewarded
--   Incentives match contribution levels, achieving fair distribution
--   The higher the user participation, the greater the potential for earnings
+-   **Every beneficial behavior of users can be rewarded**
+-   **Incentives match contribution levels, achieving fair distribution**
+-   **The higher the user participation, the greater the potential for earnings**
 
 ### 6.3 Progressive Privilege System
 
@@ -120,74 +116,47 @@ The purpose of this system is to allow high-contribution users to receive more r
 
 To ensure the virtuous cycle of the XMEX economic system, the platform has designed multiple token consumption and value reflow mechanisms. Through the above multi-dimensional consumption scenario designs, XMEX forms a closed loop of Output—Consumption—Reflow within the ecosystem:
 
--   Users acquire XMEX through contribution behaviors
--   Users use XMEX for platform services, equity redemption, content promotion, etc.
--   Fees collected by the platform and consumed XMEX are used for buyback and burn or redistribution
--   Forming a healthy production-consumption balance, ensuring continuous token circulation
+-   **Users acquire XMEX through contribution behaviors**
+-   **Users use XMEX for platform services and equity redemption**
+-   **Consumed XMEX will be burned or re-enter the incentive pool**
 
-## 7. XMEX Staking Mechanism and Equity System
+This design ensures that tokens are not released unidirectionally but circulate within the ecosystem, maintaining the stability of token value.
 
-In addition to earning income through behavior mining, you can also share the dividends of platform growth and achieve continuous asset appreciation by staking XMEX. The XMEX staking mechanism is not "locking for fixed income" in the traditional sense, but an ecosystem participation and equity acquisition mechanism.
+## 7. Staking Mechanism: The Bridge of Value
 
-### 7.1 Original Intention of Staking Mechanism Design
+The staking mechanism is the core link connecting XME and XMEX, and is also an important channel for users to deeply participate in the ecosystem and obtain long-term returns.
 
-The core goals of the XMEX staking mechanism are:
+### 7.1 Staking XMEX to Obtain XME
 
--   Encourage users to participate in the X.me ecosystem for the long term, forming a stable content and social network
--   Return real platform business value to ecosystem contributors in a rule-based manner
--   Provide a sustainable incentive engine for the "Social + Earning" model
--   Build long-term trust through transparent rules rather than income promises
+Users can stake their held XMEX into the staking contract to obtain XME rewards. This mechanism provides users with a path to upgrade from utility token holders to governance token holders.
 
-### 7.2 Delegated Staking Model
+-   **Staking Rules**: Users can choose different staking periods; the longer the period, the higher the yield.
+-   **Reward Source**: XME rewards come from the ecosystem incentive pool and platform revenue buybacks.
+-   **Value Capture**: Through staking, users lock liquidity, reducing market selling pressure while obtaining potential high returns from platform growth.
 
-X.me introduces Delegated Staking, where users can delegate XMEX to "Community Nodes" within the platform to jointly participate in ecosystem construction. Users can freely choose one or more nodes for delegation, and delegation supports unbinding (a short cooling-off period can be set to balance liquidity and security). The total amount of delegation a node can receive is related to its own commitment/node level, avoiding the unlimited expansion of "irresponsible nodes".
+### 7.2 Staking XME for Governance and Dividends
 
-### 7.3 Staking Yield Mechanism
+XME holders can obtain vXME (voting power) and dividend rights by staking XME.
 
-The staking mechanism adopts a monthly compound interest model, and users' staking yields are closely linked to ecosystem development. Specifically:
-
--   **Yield Sources**: Staking yields mainly come from the reflow of platform commercial revenue, incentive pool distribution, and token appreciation brought by ecosystem growth.
--   **Compound Interest Effect**: Users' staking principal and interest will automatically be compounded and re-staked. Over time, yields will show exponential growth.
--   **Ecosystem Positive Correlation**: Your staking yield is completely positively correlated with the prosperity of the entire ecosystem (user growth, platform revenue, activity) and personal participation depth (staking duration, staking amount). The more the ecosystem develops and the more active users are, the greater your staking yield potential.
-
-### 7.4 Core Staking Privileges
-
-After users delegate XMEX, they are not promised fixed income but unlock three core privileges:
-
--   **Growth Privileges**: Obtain user level growth bonuses, level retention/demotion protection, earlier unlocking of advanced tasks, etc.
--   **Incentive Privileges**: Obtain higher daily incentive claim limits, increased reward weights for high-value tasks, etc.
--   **Distribution & Exposure Privileges**: Content publication receives fairer initial distribution weights, priority participation in platform recommendation mechanism testing, etc.
-
-### 7.5 Sustainability of Staking
-
-The core purpose of this mechanism design is: to provide a stable passive income channel for users who are optimistic about the X.me ecosystem for the long term, while incentivizing users to participate in and co-build the ecosystem for the long term. Staking can not only bring you considerable returns, but more importantly, you become a beneficiary of ecosystem growth, closely linked to the platform's development destiny.
+-   **Governance Voting**: vXME is the only credential for participating in platform governance voting. The amount of vXME determines the user's weight in decision-making.
+-   **Platform Dividends**: A portion of the platform's revenue (such as transaction fees, advertising revenue, etc.) will be distributed to XME stakers in the form of XMEX or stablecoins.
+-   **Ecosystem Airdrops**: XME stakers will have the opportunity to receive token airdrops from ecosystem partner projects.
 
 ## 8. Token Allocation & Release
 
-**XME Total Supply: 1 Billion (Fixed)**
+**XME Total Supply: 1 Billion**
 
 | Allocation | Percentage |
 | :--- | :--- |
-| **Ecosystem & Treasury** | 25% |
-| **Public Sale** | 25% |
-| **User Incentive Airdrop** | 15% |
-| **Core Team & Advisors** | 15% |
-| **Private Sale** | 10% |
-| **Liquidity Provision** | 10% |
-
-**XMEX Total Supply: 100 Billion (Initial Total)**
-
-The allocation management of XMEX mainly lies in "On-Demand Release Allocation". The vast majority (90%) will serve as ecosystem incentives, publicly distributed to participants contributing to the X.me ecosystem over the next eight years through methods such as "Behavior Control" and "Content Control" mentioned above. Allocation follows these principles:
-
--   Fair distribution based on user contribution levels
--   Balance between incentives and consumption to ensure economic health
--   Regularly publish XMEX output and consumption data to accept community supervision
--   Flexibly adjust incentive parameters based on ecosystem development status
+| **Ecosystem / Community Treasury** | **25%** |
+| **Public Sale** | **25%** |
+| **Early Users & Community Airdrop** | **15%** |
+| **Core Team & Advisors** | **15%** |
+| **Private Sale & Strategic Investors** | **10%** |
+| **Marketing & Liquidity** | **10%** |
 
 ## 9. Conclusion
 
-We firmly believe that the dual-token economic model constructed by X.me is a sophisticated system integrating incentives, value closed-loops, and community co-governance. It is not just an economic architecture but an important tool for us to realize the grand vision of "building a value network truly centered on creators and users". XME defines the platform's breadth (governance rights and ownership), while XMEX defines the platform's depth (incentives and participation).
+The X.me dual-token economic model is an innovative attempt at Web3 social ecosystem construction. By organically combining governance token XME and utility token XMEX, we have built an economic system that is both incentivizing and self-balancing. This system not only ensures fair returns for users' contributions but also provides a solid foundation for the platform's long-term development.
 
-Through four innovative mechanisms: Behavior Mining, Content Assetization, AI-Empowered Creation, and Open Economic Ecosystem, X.me provides users with true value return. Users are no longer passive consumers but owners and decision-makers of the ecosystem. As the ecosystem develops, users' rights and interests will also continue to grow.
-
-We sincerely invite all creators and users to witness and participate in this exciting socio-economic experiment with us. On X.me, every minute of yours is mining, and every interaction is increasing your earnings.
+We believe that only by truly returning value and sovereignty to users can we stimulate the infinite potential of the community and build a truly prosperous, diverse, and sustainable decentralized content ecosystem. X.me invites global creators and users to join this great experiment and create a better Web3 future together.
