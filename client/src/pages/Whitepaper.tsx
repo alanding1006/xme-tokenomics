@@ -1,7 +1,5 @@
+import { Streamdown } from 'streamdown';
 import { useEffect, useState, useRef } from 'react';
-import ReactMarkdown from 'react-markdown';
-import rehypeSlug from 'rehype-slug';
-import remarkGfm from 'remark-gfm';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -186,12 +184,7 @@ export default function Whitepaper() {
                 </Button>
               </Link>
             </div>
-            <ReactMarkdown 
-              remarkPlugins={[remarkGfm]}
-              rehypePlugins={[rehypeSlug]}
-            >
-              {content}
-            </ReactMarkdown>
+            <Streamdown>{content}</Streamdown>
           </article>
         </div>
       </main>
