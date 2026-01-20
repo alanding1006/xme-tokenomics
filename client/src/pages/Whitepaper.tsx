@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Download, List, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Download, List, ChevronRight, Globe } from 'lucide-react';
 import { Link } from 'wouter';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
@@ -12,11 +12,13 @@ export default function Whitepaper() {
   const [content, setContent] = useState('');
   const [activeSection, setActiveSection] = useState('');
   const [isTocOpen, setIsTocOpen] = useState(false);
+  const [language, setLanguage] = useState<'en' | 'zh'>('en');
   const articleRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     // Add timestamp to prevent caching
-    fetch(`/whitepaper_en.md?t=${new Date().getTime()}`)
+    const filename = language === 'en' ? 'whitepaper_en.md' : 'whitepaper_zh.md';
+    fetch(`/${filename}?t=${new Date().getTime()}`)
       .then(res => res.text())
       .then(text => {
         // Manually inject IDs into headings for TOC navigation
@@ -27,14 +29,14 @@ export default function Whitepaper() {
         // But since we want to keep Streamdown, let's try to inject HTML anchors which are valid Markdown.
         
         const processedText = text.replace(/^##\s+(.+)$/gm, (match, title) => {
-          const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+          const slug = title.toLowerCase().replace(/[^a-z0-9\u4e00-\u9fa5]+/g, '-');
           // Inject an invisible anchor div above the heading to serve as scroll target
           return `<div id="${slug}" style="position: relative; top: -100px; visibility: hidden;"></div>\n\n## ${title}`;
         });
         
         setContent(processedText);
       });
-  }, []);
+  }, [language]);
 
   // Extract headings for TOC from the original text (we can parse the processed text too)
   // We need to be careful not to extract the HTML we just added.
@@ -82,6 +84,10 @@ export default function Whitepaper() {
     }
   };
 
+  const toggleLanguage = () => {
+    setLanguage(prev => prev === 'en' ? 'zh' : 'en');
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col font-sans selection:bg-primary/20">
       <Header />
@@ -94,13 +100,28 @@ export default function Whitepaper() {
               <Link href="/">
                 <Button variant="ghost" className="w-full justify-start gap-2 pl-0 hover:bg-transparent hover:text-primary mb-4">
                   <ArrowLeft className="w-4 h-4" />
-                  Back to Home
+                  {language === 'en' ? 'Back to Home' : '返回首页'}
                 </Button>
               </Link>
-              <h3 className="font-display font-bold text-lg mb-4 text-white/90 px-2">Contents</h3>
+              
+              <div className="flex items-center justify-between mb-4 px-2">
+                <h3 className="font-display font-bold text-lg text-white/90">
+                  {language === 'en' ? 'Contents' : '目录'}
+                </h3>
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  onClick={toggleLanguage}
+                  className="h-8 px-2 text-xs font-medium text-muted-foreground hover:text-primary"
+                >
+                  <Globe className="w-3 h-3 mr-1" />
+                  {language === 'en' ? '中文' : 'English'}
+                </Button>
+              </div>
+
               <nav className="space-y-1">
                 {headings.map((heading, index) => {
-                  const id = heading.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                  const id = heading.toLowerCase().replace(/[^a-z0-9\u4e00-\u9fa5]+/g, '-');
                   return (
                     <button
                       key={index}
@@ -112,7 +133,7 @@ export default function Whitepaper() {
                           : "text-muted-foreground hover:text-white hover:bg-white/5"
                       )}
                     >
-                      {activeSection === id && <ChevronRight className="w-3 h-3" />}
+                      {activeSection === id && <ChevronRight className="w-3 h-3 flex-shrink-0" />}
                       <span className="truncate">{heading}</span>
                     </button>
                   );
@@ -123,13 +144,20 @@ export default function Whitepaper() {
             <div className="pt-6 mt-6 border-t border-white/10">
               <Button variant="outline" className="w-full gap-2" onClick={() => window.print()}>
                 <Download className="w-4 h-4" />
-                Save as PDF
+                {language === 'en' ? 'Save as PDF' : '保存为 PDF'}
               </Button>
             </div>
           </aside>
 
           {/* Mobile TOC Toggle */}
-          <div className="lg:hidden fixed bottom-6 right-6 z-50">
+          <div className="lg:hidden fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+            <Button 
+              size="icon" 
+              className="h-12 w-12 rounded-full shadow-xl bg-card border border-white/10 hover:bg-card/80"
+              onClick={toggleLanguage}
+            >
+              <span className="text-xs font-bold">{language === 'en' ? '中' : 'En'}</span>
+            </Button>
             <Button 
               size="icon" 
               className="h-12 w-12 rounded-full shadow-xl bg-primary hover:bg-primary/90"
@@ -156,10 +184,23 @@ export default function Whitepaper() {
                   exit={{ x: '100%' }}
                   className="fixed right-0 top-0 bottom-0 w-80 bg-card border-l border-white/10 z-50 p-6 overflow-y-auto"
                 >
-                  <h3 className="font-display font-bold text-xl mb-6 text-white">Contents</h3>
+                  <div className="flex items-center justify-between mb-6">
+                    <h3 className="font-display font-bold text-xl text-white">
+                      {language === 'en' ? 'Contents' : '目录'}
+                    </h3>
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      onClick={toggleLanguage}
+                      className="h-8 px-2 text-xs font-medium text-muted-foreground hover:text-primary"
+                    >
+                      <Globe className="w-3 h-3 mr-1" />
+                      {language === 'en' ? '中文' : 'English'}
+                    </Button>
+                  </div>
                   <nav className="space-y-2">
                     {headings.map((heading, index) => {
-                      const id = heading.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                      const id = heading.toLowerCase().replace(/[^a-z0-9\u4e00-\u9fa5]+/g, '-');
                       return (
                         <button
                           key={index}
@@ -200,7 +241,7 @@ export default function Whitepaper() {
               <Link href="/">
                 <Button variant="ghost" className="gap-2 pl-0 hover:bg-transparent hover:text-primary">
                   <ArrowLeft className="w-4 h-4" />
-                  Back to Home
+                  {language === 'en' ? 'Back to Home' : '返回首页'}
                 </Button>
               </Link>
             </div>
