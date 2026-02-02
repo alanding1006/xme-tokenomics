@@ -13,22 +13,17 @@ export default function Roadmap() {
 
   const items = [
     {
-      key: "q1_2026",
+      key: "phase1",
       status: "completed",
       icon: CheckCircle2,
     },
     {
-      key: "q2_2026",
+      key: "phase2",
       status: "active",
       icon: Circle,
     },
     {
-      key: "q3_2026",
-      status: "upcoming",
-      icon: Circle,
-    },
-    {
-      key: "q4_2026",
+      key: "phase3",
       status: "upcoming",
       icon: Circle,
     },
