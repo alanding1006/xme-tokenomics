@@ -11,6 +11,9 @@ import { useTranslation } from "react-i18next";
 const languages = [
   { code: "en", label: "English" },
   { code: "zh", label: "中文" },
+  { code: "vi", label: "Tiếng Việt" },
+  { code: "th", label: "ไทย" },
+  { code: "id", label: "Bahasa Indonesia" },
 ];
 
 export default function LanguageSwitcher() {
