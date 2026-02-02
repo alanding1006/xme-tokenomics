@@ -47,7 +47,7 @@ export default function EconomyLoop() {
           </p>
         </div>
 
-        <div className="relative max-w-5xl mx-auto aspect-[1/1] sm:aspect-[4/3] md:aspect-[16/9] bg-black/40 rounded-3xl border border-white/10 p-2 md:p-8 flex items-center justify-center overflow-hidden backdrop-blur-sm isolate">
+        <div className="relative max-w-5xl mx-auto aspect-[1/1] sm:aspect-[4/3] md:aspect-[16/9] bg-black/40 rounded-3xl border border-white/10 p-2 md:p-8 flex items-center justify-center overflow-hidden backdrop-blur-sm isolate min-h-[400px]">
           
           {/* Central Reactor Core */}
           <div className="absolute inset-0 flex items-center justify-center z-20">
@@ -148,8 +148,8 @@ export default function EconomyLoop() {
                 <div className="absolute inset-0 bg-secondary/20 group-hover:bg-secondary/40 transition-colors" />
                 <span className="text-xl md:text-2xl">👥</span>
               </motion.div>
-              <div className="mt-2 md:mt-4 text-center bg-black/80 backdrop-blur px-2 md:px-4 py-1 md:py-2 rounded-lg border border-white/10">
-                <h4 className="text-secondary font-bold text-xs md:text-base">{t("economy.activity")}</h4>
+              <div className="mt-2 md:mt-4 text-center bg-black/80 backdrop-blur px-2 md:px-4 py-1 md:py-2 rounded-lg border border-white/10 w-24 md:w-auto">
+                <h4 className="text-secondary font-bold text-[10px] md:text-base leading-tight">{t("economy.activity")}</h4>
                 <p className="text-xs text-muted-foreground hidden md:block w-40">{t("economy.activityDesc")}</p>
               </div>
             </div>
@@ -167,8 +167,8 @@ export default function EconomyLoop() {
                 <div className="absolute inset-0 bg-secondary/20 group-hover:bg-secondary/40 transition-colors" />
                 <span className="text-xl md:text-2xl">🎁</span>
               </motion.div>
-              <div className="mt-2 md:mt-4 text-center bg-black/80 backdrop-blur px-2 md:px-4 py-1 md:py-2 rounded-lg border border-white/10">
-                <h4 className="text-secondary font-bold text-xs md:text-base">{t("economy.rewards")}</h4>
+              <div className="mt-2 md:mt-4 text-center bg-black/80 backdrop-blur px-2 md:px-4 py-1 md:py-2 rounded-lg border border-white/10 w-24 md:w-auto">
+                <h4 className="text-secondary font-bold text-[10px] md:text-base leading-tight">{t("economy.rewards")}</h4>
                 <p className="text-xs text-muted-foreground hidden md:block w-40">{t("economy.rewardsDesc")}</p>
               </div>
             </div>
@@ -186,8 +186,8 @@ export default function EconomyLoop() {
                 <div className="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors" />
                 <span className="text-xl md:text-2xl">💎</span>
               </motion.div>
-              <div className="mb-2 md:mb-4 text-center bg-black/80 backdrop-blur px-2 md:px-4 py-1 md:py-2 rounded-lg border border-white/10">
-                <h4 className="text-primary font-bold text-xs md:text-base">{t("economy.capture")}</h4>
+              <div className="mb-2 md:mb-4 text-center bg-black/80 backdrop-blur px-2 md:px-4 py-1 md:py-2 rounded-lg border border-white/10 w-24 md:w-auto">
+                <h4 className="text-primary font-bold text-[10px] md:text-base leading-tight">{t("economy.capture")}</h4>
                 <p className="text-xs text-muted-foreground hidden md:block w-40">{t("economy.captureDesc")}</p>
               </div>
             </div>
@@ -205,8 +205,8 @@ export default function EconomyLoop() {
                 <div className="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors" />
                 <span className="text-xl md:text-2xl">🗳️</span>
               </motion.div>
-              <div className="mt-2 md:mt-4 text-center bg-black/80 backdrop-blur px-2 md:px-4 py-1 md:py-2 rounded-lg border border-white/10">
-                <h4 className="text-primary font-bold text-xs md:text-base">{t("economy.governance")}</h4>
+              <div className="mt-2 md:mt-4 text-center bg-black/80 backdrop-blur px-2 md:px-4 py-1 md:py-2 rounded-lg border border-white/10 w-24 md:w-auto">
+                <h4 className="text-primary font-bold text-[10px] md:text-base leading-tight">{t("economy.governance")}</h4>
                 <p className="text-xs text-muted-foreground hidden md:block w-40">{t("economy.governanceDesc")}</p>
               </div>
             </div>

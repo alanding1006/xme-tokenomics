@@ -84,11 +84,11 @@ export default function Hero() {
             {t("hero.description")}
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start px-4 md:px-0">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start px-4 md:px-0 w-full sm:w-auto">
             <Button size="lg" className="h-12 px-8 text-lg bg-primary hover:bg-primary/90 w-full sm:w-auto shadow-[0_0_20px_rgba(79,70,229,0.3)] hover:shadow-[0_0_30px_rgba(79,70,229,0.5)] transition-shadow">
               {t("hero.explore")}
             </Button>
-            <Link href="/whitepaper">
+            <Link href="/whitepaper" className="w-full sm:w-auto">
               <Button size="lg" variant="outline" className="h-12 px-8 text-lg border-white/10 hover:bg-white/5 w-full sm:w-auto">
                 {t("hero.readWhitepaper")}
               </Button>
@@ -171,7 +171,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 20, scale: 0.9 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 20, scale: 0.9 }}
-                  className="absolute bottom-[-120px] md:top-1/2 md:bottom-auto md:right-[-50px] md:-translate-y-1/2 md:translate-x-1/4 z-30 w-64"
+                  className="absolute bottom-[-140px] left-1/2 -translate-x-1/2 md:left-auto md:translate-x-1/4 md:top-1/2 md:bottom-auto md:right-[-50px] md:-translate-y-1/2 z-30 w-64"
                 >
                   <div className="bg-black/80 backdrop-blur-xl border border-white/10 rounded-xl p-4 shadow-2xl relative overflow-hidden">
                     <div className={`absolute top-0 left-0 w-1 h-full ${hoveredToken === "XME" ? "bg-primary" : "bg-secondary"}`} />

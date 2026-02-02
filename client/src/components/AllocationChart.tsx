@@ -43,7 +43,7 @@ export default function AllocationChart() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div className="h-[300px] md:h-[400px] w-full">
+          <div className="h-[250px] md:h-[400px] w-full">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
                 <Pie
@@ -51,7 +51,7 @@ export default function AllocationChart() {
                   cx="50%"
                   cy="50%"
                   innerRadius={60}
-                  outerRadius={120}
+                  outerRadius={100}
                   paddingAngle={2}
                   dataKey="value"
                   stroke="none"

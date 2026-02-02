@@ -70,7 +70,7 @@ export default function Roadmap() {
                   }`}
                 >
                   {/* Icon Node */}
-                  <div className="relative z-10 flex-shrink-0 mt-1 md:mt-0">
+                  <div className="relative z-10 flex-shrink-0 mt-1 md:mt-0 ml-0 md:ml-0">
                     <div
                       className={`w-12 h-12 rounded-full border-4 flex items-center justify-center bg-background ${
                         item.status === "completed"
