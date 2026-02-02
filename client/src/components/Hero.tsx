@@ -175,31 +175,31 @@ export default function Hero() {
                 >
                   <div className="bg-black/80 backdrop-blur-xl border border-white/10 rounded-xl p-4 shadow-2xl relative overflow-hidden">
                     <div className={`absolute top-0 left-0 w-1 h-full ${hoveredToken === "XME" ? "bg-primary" : "bg-secondary"}`} />
-                    <div className="space-y-3">
-                      <div className="flex items-center justify-between">
-                        <h3 className="font-display font-bold text-lg">{hoveredToken}</h3>
-                        <span className={`text-xs px-2 py-0.5 rounded-full ${hoveredToken === "XME" ? "bg-primary/20 text-primary" : "bg-secondary/20 text-secondary"}`}>
-                          {hoveredToken === "XME" ? "Governance" : "Utility"}
-                        </span>
-                      </div>
-                      
-                      <div className="space-y-1">
-                        <p className="text-xs text-muted-foreground">Simulated Price</p>
-                        <div className="flex items-baseline gap-2">
-                          <span className="text-xl font-mono font-bold">
-                            {hoveredToken === "XME" ? "$1.25" : "$0.05"}
+                      <div className="space-y-3">
+                        <div className="flex items-center justify-between">
+                          <h3 className="font-display font-bold text-lg">{hoveredToken}</h3>
+                          <span className={`text-xs px-2 py-0.5 rounded-full ${hoveredToken === "XME" ? "bg-primary/20 text-primary" : "bg-secondary/20 text-secondary"}`}>
+                            {hoveredToken === "XME" ? t("dualToken.xme.type") : t("dualToken.xmex.type")}
                           </span>
-                          <span className="text-xs text-green-500 font-mono">+5.2%</span>
+                        </div>
+                        
+                        <div className="space-y-1">
+                          <p className="text-xs text-muted-foreground">{t("calculator.estimatedReturns")}</p>
+                          <div className="flex items-baseline gap-2">
+                            <span className="text-xl font-mono font-bold">
+                              {hoveredToken === "XME" ? "$1.25" : "$0.05"}
+                            </span>
+                            <span className="text-xs text-green-500 font-mono">+5.2%</span>
+                          </div>
+                        </div>
+
+                        <div className="space-y-1">
+                          <p className="text-xs text-muted-foreground">{t("allocation.totalSupply")}</p>
+                          <p className="text-sm font-mono">
+                            {hoveredToken === "XME" ? "12,500,000" : "450,000,000"}
+                          </p>
                         </div>
                       </div>
-
-                      <div className="space-y-1">
-                        <p className="text-xs text-muted-foreground">Circulating Supply</p>
-                        <p className="text-sm font-mono">
-                          {hoveredToken === "XME" ? "12,500,000" : "450,000,000"}
-                        </p>
-                      </div>
-                    </div>
                     
                     {/* Decorative HUD lines */}
                     <div className="absolute top-2 right-2 w-2 h-2 border-t border-r border-white/20" />

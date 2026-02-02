@@ -39,12 +39,15 @@ export default function DualTokenSection() {
                   {t("dualToken.xme.desc")}
                 </p>
                 <ul className="space-y-3">
-                  {(t("dualToken.xme.features", { returnObjects: true }) as string[]).map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-muted-foreground text-sm md:text-base">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
+                  {(() => {
+                    const features = t("dualToken.xme.features", { returnObjects: true });
+                    return Array.isArray(features) ? features.map((item: any, i: number) => (
+                      <li key={i} className="flex items-start gap-3 text-muted-foreground text-sm md:text-base">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        {item}
+                      </li>
+                    )) : null;
+                  })()}
                 </ul>
               </CardContent>
             </Card>
@@ -72,12 +75,15 @@ export default function DualTokenSection() {
                   {t("dualToken.xmex.desc")}
                 </p>
                 <ul className="space-y-3">
-                  {(t("dualToken.xmex.features", { returnObjects: true }) as string[]).map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-muted-foreground text-sm md:text-base">
-                      <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
+                  {(() => {
+                    const features = t("dualToken.xmex.features", { returnObjects: true });
+                    return Array.isArray(features) ? features.map((item: any, i: number) => (
+                      <li key={i} className="flex items-start gap-3 text-muted-foreground text-sm md:text-base">
+                        <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 flex-shrink-0" />
+                        {item}
+                      </li>
+                    )) : null;
+                  })()}
                 </ul>
               </CardContent>
             </Card>

@@ -75,20 +75,16 @@
     "title": "Roadmap",
     "subtitle": "Our strategic path to decentralization and ecosystem maturity.",
     "q1_2026": {
-      "title": "Q1 2026: Foundation",
-      "desc": "Platform development, Smart contract audit, Alpha testing"
+      "title": "Before April: Foundation",
+      "desc": "Platform development, Web2 sub-features (pan-psychology, mini-games)"
     },
     "q2_2026": {
-      "title": "Q2 2026: Growth",
-      "desc": "User acquisition campaigns, Global ambassador program, Testnet incentives"
+      "title": "July: Growth",
+      "desc": "XMEX listing on DEX, Liquidity provision"
     },
     "q3_2026": {
-      "title": "Q3 2026: Genesis",
-      "desc": "TGE (Token Generation Event), Mainnet launch, Staking & Trading live"
-    },
-    "q4_2026": {
-      "title": "Q4 2026: Expansion",
-      "desc": "DAO governance launch, Ecosystem grants, Cross-chain integration"
+      "title": "December: Expansion",
+      "desc": "XME Alpha launch, Binance contracts listing"
     }
   },
   "calculator": {
